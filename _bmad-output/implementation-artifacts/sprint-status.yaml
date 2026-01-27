@@ -1,0 +1,99 @@
+# generated: 2026-01-27
+# project: WaterHouse
+# project_key: waterhouse
+# tracking_system: file-system
+# story_location: {project-root}/_bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-01-27
+project: WaterHouse
+project_key: waterhouse
+tracking_system: file-system
+story_location: {project-root}/_bmad-output/implementation-artifacts
+
+development_status:
+  # Epic 1: Authentification et Accès Sécurisé
+  epic-1: in-progress
+  1-1-authentification-par-sms-otp: ready-for-dev
+  1-2-acces-rapide-par-pin-biometrie: backlog
+  1-3-deconnexion-automatique: backlog
+  1-4-chiffrement-des-donnees-sensibles: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: Gestion des Données de Base
+  epic-2: in-progress
+  2-1-synchronisation-des-donnees-de-base: ready-for-dev
+  2-2-stockage-local-des-donnees: backlog
+  2-3-interface-d-administration-web: backlog
+  2-4-gestion-des-compteurs: backlog
+  2-5-import-export-des-donnees: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: Saisie des Relevés Hors-Ligne
+  epic-3: in-progress
+  3-1-liste-des-compteurs-triee: ready-for-dev
+  3-2-capture-photo-obligatoire: backlog
+  3-3-validation-en-temps-reel: backlog
+  3-4-stockage-local-hors-ligne: backlog
+  3-5-indicateur-de-statut-de-synchronisation: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: Synchronisation et Résolution de Conflits
+  epic-4: in-progress
+  4-1-synchronisation-automatique-en-ligne: ready-for-dev
+  4-2-resolution-manuelle-des-conflits: backlog
+  4-3-retry-des-synchronisations-échouées: backlog
+  4-4-affichage-du-statut-de-synchronisation: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: Calcul et Génération des Factures
+  epic-5: in-progress
+  5-1-configuration-des-tarifs-de-facturation: ready-for-dev
+  5-2-calcul-automatique-de-la-consommation: backlog
+  5-3-generation-de-factures-pdf: backlog
+  5-4-historique-des-factures: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: Envoi et Communication
+  epic-6: in-progress
+  6-1-envoi-de-factures-par-sms: ready-for-dev
+  6-2-notifications-push: ready-for-dev
+  6-3-logs-de-communication: ready-for-dev
+  6-4-gestion-des-echecs-d-envoi-sms: ready-for-dev
+  epic-6-retrospective: optional
+
+  # Epic 7: Interface Web de Gestion
+  epic-7: in-progress
+  7-1-validation-des-releves: ready-for-dev
+  7-2-visualisation-des-photos-de-releves: ready-for-dev
+  7-3-generation-de-rapports: ready-for-dev
+  7-4-gestion-des-utilisateurs: ready-for-dev
+  epic-7-retrospective: optional

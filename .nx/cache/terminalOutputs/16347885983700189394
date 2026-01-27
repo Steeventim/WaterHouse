@@ -1,0 +1,16 @@
+> webpack-cli build --node-env=production
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m [1m[32m8:22-63[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '../../modules/auth/auth.module' in '/home/tims/Dev1.0/WaterHouse/api/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts:[32m[1m4:28[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '../../modules/auth/auth.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mAppController[39m } [36mfrom[39m [32m'./app.controller'[39m[33m;[39m
+   [90m 3 |[39m [36mimport[39m { [33mAppService[39m } [36mfrom[39m [32m'./app.service'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAuthModule[39m } [36mfrom[39m [32m'../../modules/auth/auth.module'[39m[33m;[39m
+   [90m   |[39m                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 5 |[39m
+   [90m 6 |[39m [33m@[39m[33mModule[39m({
+   [90m 7 |[39m   imports[33m:[39m [[33mAuthModule[39m][33m,[39m[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (dd9afa5a1ee1cb6f)

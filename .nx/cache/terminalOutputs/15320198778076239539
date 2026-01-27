@@ -1,0 +1,140 @@
+[NX CLOUD] Verifying current cloud bundle
+[NX CLOUD] A local bundle currently exists:  {
+  version: [32m'2601.26.5.hotfix1'[39m,
+  fullPath: [32m'/home/tims/Dev1.0/WaterHouse/.nx/cache/cloud/2601.26.5.hotfix1'[39m
+}
+[NX CLOUD] Last verification was within the past 30 minutes, will not verify this time
+[NX CLOUD] Done:  /home/tims/Dev1.0/WaterHouse/.nx/cache/cloud/2601.26.5.hotfix1
+[31mWas not able to require.resolve module nx/src/utils/app-root from the following paths: /home/tims/Dev1.0/WaterHouse/node_modules. This may be expected.[39m
+[31mWas not able to require.resolve module nx/src/utils/app-root from the following paths: /home/tims/Dev1.0/WaterHouse/node_modules. This may be expected.[39m
+[NX CLOUD] Verifying current cloud bundle
+[NX CLOUD] A local bundle currently exists:  {
+  version: [32m'2601.26.5.hotfix1'[39m,
+  fullPath: [32m'/home/tims/Dev1.0/WaterHouse/.nx/cache/cloud/2601.26.5.hotfix1'[39m
+}
+[NX CLOUD] Last verification was within the past 30 minutes, will not verify this time
+[NX CLOUD] Done:  /home/tims/Dev1.0/WaterHouse/.nx/cache/cloud/2601.26.5.hotfix1
+[Nx Cloud Debug] Attempting to acquire filesystem lock with path:  /tmp/client-instance-id.lock
+[Nx Cloud Debug] Failed to create folder lock at path: /tmp/client-instance-id.lock
+[Nx Cloud] Unable to detect a VCS context from the environment.
+
+[0m[7m[1m[38;2;255;165;0m NX [39m[22m[27m[0m  [38;2;255;165;0mRunStart[39m
+
+
+{
+  "branch": null,
+  "ciExecutionId": null,
+  "ciExecutionEnv": "",
+  "hashes": [
+    "16517806102583042095"
+  ],
+  "machineInfo": {
+    "machineId": "O9XhqEZYRjeKg+AHh/HYew==",
+    "platform": "linux",
+    "version": "#91-Ubuntu SMP PREEMPT_DYNAMIC Tue Nov 18 14:14:30 UTC 2025",
+    "cpuCores": 4
+  },
+  "vcsContext": null,
+  "clientInstanceSource": "CLOUD_RUNNER",
+  "clientInstanceId": "13c52c4a-d8f0-430b-834a-0e0b6cb2827a"
+}
+
+[Nx Cloud] Unable to detect a VCS context from the environment.
+
+[0m[7m[1m[38;2;255;165;0m NX [39m[22m[27m[0m  [38;2;255;165;0mRunStart[39m
+
+
+{
+  "branch": null,
+  "ciExecutionId": null,
+  "ciExecutionEnv": "",
+  "hashes": [
+    "16517806102583042095"
+  ],
+  "machineInfo": {
+    "machineId": "O9XhqEZYRjeKg+AHh/HYew==",
+    "platform": "linux",
+    "version": "#91-Ubuntu SMP PREEMPT_DYNAMIC Tue Nov 18 14:14:30 UTC 2025",
+    "cpuCores": 4
+  },
+  "vcsContext": null,
+  "clientInstanceSource": "CLOUD_RUNNER",
+  "clientInstanceId": "13c52c4a-d8f0-430b-834a-0e0b6cb2827a"
+}
+
+RunStart duration: 922
+
+[0m[7m[1m[38;2;255;165;0m NX [39m[22m[27m[0m  [38;2;255;165;0mNx Cloud: Cache miss 16517806102583042095.[39m
+
+
+[2m> [22m[2mnx run[22m api:build:development
+
+> webpack-cli build --node-env=development
+
+RunStart duration: 1043
+webpack compiled [1m[32msuccessfully[39m[22m (9d1c066328c528bd)
+
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project api[39m
+
+
+[31m[1m[31mDebugger listening on ws://localhost:9229/8e1369ee-f071-4d7c-ad14-dc2debb55975[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m[39m
+[32m[Nest] 99521  - [39m27/01/2026 16:30:14 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[31m[1m[31m[31m[Nest] 99521  - [39m[31m27/01/2026 16:30:14 [31m  ERROR[39m[31m [38;5;3m[TypeOrmModule] [39m[31m[31mUnable to connect to the database. Retrying (1)...[39m[31m[39m[22m
+[1m[31mDriverPackageNotInstalledError: SQLite package has not been found installed. Please run "npm install sqlite3".[39m[22m
+[1m[31m    at SqliteDriver.loadDependencies (/home/tims/Dev1.0/WaterHouse/src/driver/sqlite/SqliteDriver.ts:198:19)[39m[22m
+[1m[31m    at new SqliteDriver (/home/tims/Dev1.0/WaterHouse/src/driver/sqlite/SqliteDriver.ts:43:14)[39m[22m
+[1m[31m    at DriverFactory.create (/home/tims/Dev1.0/WaterHouse/src/driver/DriverFactory.ts:44:24)[39m[22m
+[1m[31m    at new DataSource (/home/tims/Dev1.0/WaterHouse/src/data-source/DataSource.ts:150:43)[39m[22m
+[1m[31m    at createTypeormDataSource (/home/tims/Dev1.0/WaterHouse/node_modules/@nestjs/typeorm/dist/typeorm-core.module.js:164:23)[39m[22m
+[1m[31m    at /home/tims/Dev1.0/WaterHouse/node_modules/@nestjs/typeorm/dist/typeorm-core.module.js:169:36[39m[22m
+[1m[31m    at Observable._subscribe (/home/tims/Dev1.0/WaterHouse/node_modules/rxjs/src/internal/observable/defer.ts:55:15)[39m[22m
+[1m[31m    at Observable._trySubscribe (/home/tims/Dev1.0/WaterHouse/node_modules/rxjs/src/internal/Observable.ts:244:19)[39m[22m
+[1m[31m    at /home/tims/Dev1.0/WaterHouse/node_modules/rxjs/src/internal/Observable.ts:234:18[39m[22m
+[1m[31m    at Object.errorContext (/home/tims/Dev1.0/WaterHouse/node_modules/rxjs/src/internal/util/errorContext.ts:29:5)[39m[22m
+[1m[31m[39m[22m[39m
+[32m[Nest] 99521  - [39m27/01/2026 16:30:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 99521  - [39m27/01/2026 16:30:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +3ms[39m
+[31m[1m[31m[31m[Nest] 99521  - [39m[31m27/01/2026 16:30:14 [31m  ERROR[39m[31m [38;5;3m[ExceptionHandler] [39m[31mUnknownDependenciesException [Error]: Nest can't resolve dependencies of the DevController (?). Please make sure that the argument UsersService at index [0] is available in the AppModule context.[39m[22m
+[1m[31m[39m[22m
+[1m[31mPotential solutions:[39m[22m
+[1m[31m- Is AppModule a valid NestJS module?[39m[22m
+[1m[31m- If UsersService is a provider, is it part of the current AppModule?[39m[22m
+[1m[31m- If UsersService is exported from a separate @Module, is that module imported within AppModule?[39m[22m
+[1m[31m  @Module({[39m[22m
+[1m[31m    imports: [ /* the Module containing UsersService */ ][39m[22m
+[1m[31m  })[39m[22m
+[1m[31m[39m[22m
+[1m[31mFor more common dependency resolution issues, see: https://docs.nestjs.com/faq/common-errors[39m[22m
+[1m[31m    at Injector.lookupComponentInParentModules [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/injector.js:290:19[90m)[39m[31m[39m[22m
+[1m[31m    at resolveParam [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/injector.js:140:38[90m)[39m[31m[39m[22m
+[1m[31m    at async Promise.all (index 0)[39m[22m
+[1m[31m    at Injector.resolveConstructorParams [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/injector.js:169:27[90m)[39m[31m[39m[22m
+[1m[31m    at Injector.loadInstance [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/injector.js:75:13[90m)[39m[31m[39m[22m
+[1m[31m    at Injector.loadController [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/injector.js:94:9[90m)[39m[31m[39m[22m
+[1m[31m    at [90m/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/instance-loader.js:68:13[39m[22m
+[1m[31m    at async Promise.all (index 1)[39m[22m
+[1m[31m    at InstanceLoader.createInstancesOfControllers [90m(/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/instance-loader.js:67:9[90m)[39m[31m[39m[22m
+[1m[31m    at [90m/home/tims/Dev1.0/WaterHouse/[39m[31mnode_modules/[4m@nestjs[24m/core/injector/instance-loader.js:42:13 {[39m[22m
+[1m[31m  type: [32m'DevController'[39m[31m,[39m[22m
+[1m[31m  context: {[39m[22m
+[1m[31m    index: [33m0[39m[31m,[39m[22m
+[1m[31m    dependencies: [[39m[22m
+[1m[31m      [36m[class UsersService][39m[31m[39m[22m
+[1m[31m    ],[39m[22m
+[1m[31m    name: [36m[class UsersService][39m[31m[39m[22m
+[1m[31m  },[39m[22m
+[1m[31m  metadata: {[39m[22m
+[1m[31m    id: [32m'b49a4a0e46794202a22de'[39m[31m[39m[22m
+[1m[31m  },[39m[22m
+[1m[31m  moduleRef: {[39m[22m
+[1m[31m    id: [32m'11e7781edf630bd54bdda'[39m[31m[39m[22m
+[1m[31m  }[39m[22m
+[1m[31m}[39m[22m
+[1m[31m[39m[22m[39m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+

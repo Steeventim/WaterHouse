@@ -1,0 +1,52 @@
+> webpack-cli build --node-env=production
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m [1m[32m10:18-44[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@nestjs/typeorm' in '/home/tims/Dev1.0/WaterHouse/api/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/auth.module.ts[39m[22m [1m[32m11:18-44[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@nestjs/typeorm' in '/home/tims/Dev1.0/WaterHouse/api/src/modules/auth'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/users.service.ts[39m[22m [1m[32m7:18-44[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@nestjs/typeorm' in '/home/tims/Dev1.0/WaterHouse/api/src/modules/auth'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts:[32m[1m6:31[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '@nestjs/typeorm' or its corresponding type declarations.
+  [0m [90m 4 |[39m [36mimport[39m { [33mDevController[39m } [36mfrom[39m [32m'./dev.controller'[39m[33m;[39m
+   [90m 5 |[39m [36mimport[39m { [33mAuthModule[39m } [36mfrom[39m [32m'../modules/auth/auth.module'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mTypeOrmModule[39m } [36mfrom[39m [32m'@nestjs/typeorm'[39m[33m;[39m
+   [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 7 |[39m [36mimport[39m { join } [36mfrom[39m [32m'path'[39m[33m;[39m
+   [90m 8 |[39m
+   [90m 9 |[39m [33m@[39m[33mModule[39m({[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/auth.module.ts:[32m[1m7:31[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '@nestjs/typeorm' or its corresponding type declarations.
+  [0m [90m  5 |[39m [36mimport[39m { [33mJwtStrategy[39m } [36mfrom[39m [32m'./jwt.strategy'[39m[33m;[39m
+   [90m  6 |[39m [36mimport[39m { [33mUsersService[39m } [36mfrom[39m [32m'./users.service'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mTypeOrmModule[39m } [36mfrom[39m [32m'@nestjs/typeorm'[39m[33m;[39m
+   [90m    |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m  8 |[39m [36mimport[39m { [33mUserEntity[39m } [36mfrom[39m [32m'./entities/user.entity'[39m[33m;[39m
+   [90m  9 |[39m
+   [90m 10 |[39m [33m@[39m[33mModule[39m({[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/users.service.ts:[32m[1m2:34[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '@nestjs/typeorm' or its corresponding type declarations.
+  [0m [90m 1 |[39m [36mimport[39m { [33mInjectable[39m[33m,[39m [33mOptional[39m } [36mfrom[39m [32m'@nestjs/common'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mInjectRepository[39m } [36mfrom[39m [32m'@nestjs/typeorm'[39m[33m;[39m
+   [90m   |[39m                                  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 3 |[39m [36mimport[39m { [33mRepository[39m } [36mfrom[39m [32m'typeorm'[39m[33m;[39m
+   [90m 4 |[39m [36mimport[39m { [33mUserEntity[39m } [36mfrom[39m [32m'./entities/user.entity'[39m[33m;[39m
+   [90m 5 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/users.service.ts:[32m[1m32:14[22m[39m[1m[39m[22m
+[90mTS2352: [39mConversion of type 'Promise<UserEntity[]>' to type 'Promise<User>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'UserEntity[]' is missing the following properties from type 'User': id, username, password, role
+  [0m [90m 30 |[39m     [36mif[39m ([36mthis[39m[33m.[39mrepo) {
+   [90m 31 |[39m       [36mconst[39m e [33m=[39m [36mthis[39m[33m.[39mrepo[33m.[39mcreate(user [36mas[39m any)[33m;[39m
+  [31m[1m>[22m[39m[90m 32 |[39m       [36mreturn[39m [36mthis[39m[33m.[39mrepo[33m.[39msave(e) [36mas[39m [33mPromise[39m[33m<[39m[33mUser[39m[33m>[39m[33m;[39m
+   [90m    |[39m              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 33 |[39m     }
+   [90m 34 |[39m     [36mconst[39m id [33m=[39m [36mthis[39m[33m.[39musers[33m.[39mlength [33m+[39m [35m1[39m[33m;[39m
+   [90m 35 |[39m     [36mconst[39m newUser [33m=[39m { id[33m,[39m username[33m:[39m user[33m.[39musername[33m![39m[33m,[39m password[33m:[39m user[33m.[39mpassword[33m![39m[33m,[39m role[33m:[39m user[33m.[39mrole [33m||[39m [32m'user'[39m }[33m;[39m[0m
+
+webpack compiled with [1m[31m7 errors[39m[22m (0c1f38be67e20d0d)

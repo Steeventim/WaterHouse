@@ -1,0 +1,2296 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.4.2",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/react-native/plugin",
+      "options": {
+        "startTargetName": "start",
+        "upgradeTargetName": "update",
+        "bundleTargetName": "bundle",
+        "podInstallTargetName": "pod-install",
+        "runIosTargetName": "run-ios",
+        "runAndroidTargetName": "run-android",
+        "buildIosTargetName": "build-ios",
+        "buildAndroidTargetName": "build-android",
+        "syncDepsTargetName": "sync-deps"
+      }
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "waterhouse": [
+        {
+          "file": ".env.example",
+          "hash": "11965532897769971308"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-analyst.agent.md",
+          "hash": "15261767429889808583"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-architect.agent.md",
+          "hash": "13857002541052891055"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-dev.agent.md",
+          "hash": "16316822265099469409"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-pm.agent.md",
+          "hash": "376633248884274437"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-quick-flow-solo-dev.agent.md",
+          "hash": "16111090262781164811"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-sm.agent.md",
+          "hash": "11104674066562268007"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-tea.agent.md",
+          "hash": "13794913716049831171"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-tech-writer.agent.md",
+          "hash": "7043201116941837081"
+        },
+        {
+          "file": ".github/agents/bmd-custom-bmm-ux-designer.agent.md",
+          "hash": "5067993199857413189"
+        },
+        {
+          "file": ".github/agents/bmd-custom-core-bmad-master.agent.md",
+          "hash": "1274823178612928977"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "527181948614936038"
+        },
+        {
+          "file": ".nvmrc",
+          "hash": "14743000810602433389"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "14688272390704683536"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "15397966137827068168"
+        },
+        {
+          "file": "Application Relevé Compteurs .md",
+          "hash": "10281813508003091910"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/sprint-status.yaml",
+          "hash": "7352484107806603239"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/1-1-authentification-par-sms-otp.md",
+          "hash": "1415464400848513630"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/1-2-acces-rapide-par-pin-biometrie.md",
+          "hash": "10332013298979207535"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/1-3-deconnexion-automatique.md",
+          "hash": "1048123436991260844"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/1-4-chiffrement-des-donnees-sensibles.md",
+          "hash": "12985043230457823797"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/2-1-synchronisation-des-donnees-de-base.md",
+          "hash": "2052987015868038114"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/2-2-stockage-local-des-donnees.md",
+          "hash": "10550182786026032681"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/2-3-interface-d-administration-web.md",
+          "hash": "1619225944424373363"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/2-4-gestion-des-compteurs.md",
+          "hash": "17590385498314648733"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/2-5-import-export-des-donnees.md",
+          "hash": "2944256149874197738"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/3-1-liste-des-compteurs-triee.md",
+          "hash": "5037386025556231618"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/3-2-capture-photo-obligatoire.md",
+          "hash": "497958483925332127"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/3-3-validation-en-temps-reel.md",
+          "hash": "9351180809537971461"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/3-4-stockage-local-hors-ligne.md",
+          "hash": "14229712455282830252"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/3-5-indicateur-de-statut-de-synchronisation.md",
+          "hash": "6082702009326821816"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/4-1-synchronisation-automatique-en-ligne.md",
+          "hash": "1057503376132700349"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/4-2-resolution-manuelle-des-conflits.md",
+          "hash": "5752019963539021042"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/4-3-retry-des-synchronisations-échouées.md",
+          "hash": "12878254736275341595"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/4-4-affichage-du-statut-de-synchronisation.md",
+          "hash": "17010184479269280888"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/5-1-configuration-des-tarifs-de-facturation.md",
+          "hash": "682915275431174077"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/5-2-calcul-automatique-de-la-consommation.md",
+          "hash": "6203014433652840785"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/5-3-generation-de-factures-pdf.md",
+          "hash": "15490054306012357613"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/5-4-historique-des-factures.md",
+          "hash": "4114373640915115426"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/6-1-envoi-de-factures-par-sms.md",
+          "hash": "8275167526587183"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/6-2-notifications-push.md",
+          "hash": "11643698271633567415"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/6-3-logs-de-communication.md",
+          "hash": "400117789329884026"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/6-4-gestion-des-echecs-d-envoi-sms.md",
+          "hash": "956169854774349118"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/7-1-validation-des-releves.md",
+          "hash": "3006779568754598072"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/7-2-visualisation-des-photos-de-releves.md",
+          "hash": "2254405219304571243"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/7-3-generation-de-rapports.md",
+          "hash": "8775284410312262355"
+        },
+        {
+          "file": "_bmad-output/implementation-artifacts/stories/7-4-gestion-des-utilisateurs.md",
+          "hash": "11897146175466761767"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/architecture.md",
+          "hash": "17261973809862346757"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/epics-and-stories-archive.md",
+          "hash": "10611446049327563228"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/epics.md",
+          "hash": "6546383419444110742"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/implementation-readiness-report-2026-01-26.md",
+          "hash": "17762540897743198619"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/implementation-readiness-report-2026-01-27.md",
+          "hash": "13191875745103274535"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/prd-validation-report.md",
+          "hash": "5493344931658687757"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/prd.md",
+          "hash": "473076627966699658"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/product-brief-WaterHouse-2026-01-26.md",
+          "hash": "16021764303585737081"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/test-design-architecture.md",
+          "hash": "15261753733004194798"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/test-design-qa.md",
+          "hash": "3675123477317630676"
+        },
+        {
+          "file": "_bmad-output/planning-artifacts/ux-design-specification.md",
+          "hash": "11014113585827636931"
+        },
+        {
+          "file": "_bmad/_config/agent-manifest.csv",
+          "hash": "5528959467288417723"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-analyst.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-architect.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-dev.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-pm.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-quick-flow-solo-dev.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-sm.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-tea.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-tech-writer.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/bmm-ux-designer.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/agents/core-bmad-master.customize.yaml",
+          "hash": "5854524091586032241"
+        },
+        {
+          "file": "_bmad/_config/bmad-help.csv",
+          "hash": "12532435848338699721"
+        },
+        {
+          "file": "_bmad/_config/files-manifest.csv",
+          "hash": "8168385621951919666"
+        },
+        {
+          "file": "_bmad/_config/manifest.yaml",
+          "hash": "8606644174011953515"
+        },
+        {
+          "file": "_bmad/_config/task-manifest.csv",
+          "hash": "6341447647557556396"
+        },
+        {
+          "file": "_bmad/_config/tool-manifest.csv",
+          "hash": "12739070312980053336"
+        },
+        {
+          "file": "_bmad/_config/workflow-manifest.csv",
+          "hash": "14422136856449973025"
+        },
+        {
+          "file": "_bmad/bmm/agents/analyst.md",
+          "hash": "7361990089539373357"
+        },
+        {
+          "file": "_bmad/bmm/agents/architect.md",
+          "hash": "7530921058355340733"
+        },
+        {
+          "file": "_bmad/bmm/agents/dev.md",
+          "hash": "8669373929880620928"
+        },
+        {
+          "file": "_bmad/bmm/agents/pm.md",
+          "hash": "14636625587330566892"
+        },
+        {
+          "file": "_bmad/bmm/agents/quick-flow-solo-dev.md",
+          "hash": "4117293217491357795"
+        },
+        {
+          "file": "_bmad/bmm/agents/sm.md",
+          "hash": "14038141159790124960"
+        },
+        {
+          "file": "_bmad/bmm/agents/tea.md",
+          "hash": "18114775815184939232"
+        },
+        {
+          "file": "_bmad/bmm/agents/tech-writer/tech-writer.md",
+          "hash": "9950523282822952898"
+        },
+        {
+          "file": "_bmad/bmm/agents/ux-designer.md",
+          "hash": "6777018850604615595"
+        },
+        {
+          "file": "_bmad/bmm/config.yaml",
+          "hash": "17343060348341619914"
+        },
+        {
+          "file": "_bmad/bmm/data/project-context-template.md",
+          "hash": "6466458923235448159"
+        },
+        {
+          "file": "_bmad/bmm/module-help.csv",
+          "hash": "6042396175532926207"
+        },
+        {
+          "file": "_bmad/bmm/teams/default-party.csv",
+          "hash": "7858582777562846527"
+        },
+        {
+          "file": "_bmad/bmm/teams/team-fullstack.yaml",
+          "hash": "16499725187784791294"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/adr-quality-readiness-checklist.md",
+          "hash": "11278958670740689441"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/api-request.md",
+          "hash": "17568309476830632279"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/api-testing-patterns.md",
+          "hash": "5281476548803596697"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/auth-session.md",
+          "hash": "2705988343089550292"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/burn-in.md",
+          "hash": "10445774102827550364"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/ci-burn-in.md",
+          "hash": "13322066407711309168"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/component-tdd.md",
+          "hash": "15497207646303308457"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/contract-testing.md",
+          "hash": "17410155893555278152"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/data-factories.md",
+          "hash": "18368053385585219622"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/email-auth.md",
+          "hash": "6062844785701656680"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/error-handling.md",
+          "hash": "66570701777953907"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/feature-flags.md",
+          "hash": "11727599999019849204"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/file-utils.md",
+          "hash": "11766575730990529268"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/fixture-architecture.md",
+          "hash": "15181854402637138361"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/fixtures-composition.md",
+          "hash": "1257731031792018680"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/intercept-network-call.md",
+          "hash": "4404309900199040424"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/log.md",
+          "hash": "9573059903200479282"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/network-error-monitor.md",
+          "hash": "17196990010021703610"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/network-first.md",
+          "hash": "4672798662842550007"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/network-recorder.md",
+          "hash": "18437834105566113992"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/nfr-criteria.md",
+          "hash": "7087465424050898674"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/overview.md",
+          "hash": "9516909869551194538"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/playwright-config.md",
+          "hash": "11625286139250111126"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/probability-impact.md",
+          "hash": "16447370915565059561"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/recurse.md",
+          "hash": "10934176476803282761"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/risk-governance.md",
+          "hash": "13572132210606049722"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/selective-testing.md",
+          "hash": "17310539686425794239"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/selector-resilience.md",
+          "hash": "4001113822584143926"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/test-healing-patterns.md",
+          "hash": "961312370586149338"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/test-levels-framework.md",
+          "hash": "8140516960860185056"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/test-priorities-matrix.md",
+          "hash": "13225871348513287492"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/test-quality.md",
+          "hash": "333245718615717719"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/timing-debugging.md",
+          "hash": "9037851927436671421"
+        },
+        {
+          "file": "_bmad/bmm/testarch/knowledge/visual-debugging.md",
+          "hash": "15193783056330282792"
+        },
+        {
+          "file": "_bmad/bmm/testarch/tea-index.csv",
+          "hash": "9989124971238405082"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/product-brief.template.md",
+          "hash": "17081955949689497477"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01-init.md",
+          "hash": "10715537282106582716"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01b-continue.md",
+          "hash": "18109154229997994847"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-02-vision.md",
+          "hash": "6593825696551547817"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-03-users.md",
+          "hash": "11213631018721269442"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-04-metrics.md",
+          "hash": "4514594623092901390"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-05-scope.md",
+          "hash": "4148707082905012887"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-06-complete.md",
+          "hash": "7368831854278304270"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/create-product-brief/workflow.md",
+          "hash": "9528839327588816453"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-01-init.md",
+          "hash": "594712294254123811"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-02-domain-analysis.md",
+          "hash": "3536273127717059215"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-03-competitive-landscape.md",
+          "hash": "17603580477608479958"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-04-regulatory-focus.md",
+          "hash": "1216667117839156007"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-05-technical-trends.md",
+          "hash": "7805163351506141088"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-06-research-synthesis.md",
+          "hash": "11378370320783205887"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-01-init.md",
+          "hash": "6496418594138761546"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-behavior.md",
+          "hash": "13627706389504136732"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-insights.md",
+          "hash": "7452928412587838463"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-03-customer-pain-points.md",
+          "hash": "898486942294447917"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-04-customer-decisions.md",
+          "hash": "17574796829638365480"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-05-competitive-analysis.md",
+          "hash": "3291038165994480958"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-06-research-completion.md",
+          "hash": "14615249266552535240"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/research.template.md",
+          "hash": "8066408025561159823"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-01-init.md",
+          "hash": "4530043341371358371"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-02-technical-overview.md",
+          "hash": "17603107249466842520"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-03-integration-patterns.md",
+          "hash": "12929894768221916586"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-04-architectural-patterns.md",
+          "hash": "3054889628896053082"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-05-implementation-research.md",
+          "hash": "4614135696838368470"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-06-research-synthesis.md",
+          "hash": "11382520273925015683"
+        },
+        {
+          "file": "_bmad/bmm/workflows/1-analysis/research/workflow.md",
+          "hash": "4225656884234927775"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/data/domain-complexity.csv",
+          "hash": "8086700136360605861"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/data/prd-purpose.md",
+          "hash": "11764430001456253238"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/data/project-types.csv",
+          "hash": "987187688518743742"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-01-init.md",
+          "hash": "6173110430056883308"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-01b-continue.md",
+          "hash": "17208804356081082074"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-02-discovery.md",
+          "hash": "15542103109153078312"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-03-success.md",
+          "hash": "1614055459628464047"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-04-journeys.md",
+          "hash": "18198737573213753334"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-05-domain.md",
+          "hash": "12842266218844778411"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-06-innovation.md",
+          "hash": "16192640246780688272"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-07-project-type.md",
+          "hash": "13526809688105071136"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-08-scoping.md",
+          "hash": "3237041376419325074"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-09-functional.md",
+          "hash": "14475861509590604595"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-10-nonfunctional.md",
+          "hash": "14827250202518094072"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-11-polish.md",
+          "hash": "15292999779478136383"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-c/step-12-complete.md",
+          "hash": "16040497896423045173"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-e/step-e-01-discovery.md",
+          "hash": "809307253898960788"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-e/step-e-01b-legacy-conversion.md",
+          "hash": "4238070053264469436"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-e/step-e-02-review.md",
+          "hash": "17387326296400661845"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-e/step-e-03-edit.md",
+          "hash": "12518327926383697366"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-e/step-e-04-complete.md",
+          "hash": "11499397761934622859"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-01-discovery.md",
+          "hash": "15979995114349831699"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-02-format-detection.md",
+          "hash": "9945556516574723176"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-02b-parity-check.md",
+          "hash": "13737536748762441003"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-03-density-validation.md",
+          "hash": "16960580411674689964"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-04-brief-coverage-validation.md",
+          "hash": "370017168959811398"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-05-measurability-validation.md",
+          "hash": "10833064607291199286"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-06-traceability-validation.md",
+          "hash": "7494683012891150015"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-07-implementation-leakage-validation.md",
+          "hash": "12338185318842675587"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-08-domain-compliance-validation.md",
+          "hash": "8656553761354505435"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-09-project-type-validation.md",
+          "hash": "12814282309959286767"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-10-smart-validation.md",
+          "hash": "1706779143868860046"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-11-holistic-quality-validation.md",
+          "hash": "18300168847051013976"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-12-completeness-validation.md",
+          "hash": "2182541394460804562"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/steps-v/step-v-13-report-complete.md",
+          "hash": "7445955769008353994"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/templates/prd-template.md",
+          "hash": "17956514154848080884"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/validation-report-prd-workflow.md",
+          "hash": "3497659647994949848"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-prd/workflow.md",
+          "hash": "9573983039579660524"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01-init.md",
+          "hash": "10374596552560597681"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01b-continue.md",
+          "hash": "12373894560228928867"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-02-discovery.md",
+          "hash": "17967906217512840381"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-03-core-experience.md",
+          "hash": "15251935601229763427"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-04-emotional-response.md",
+          "hash": "12262153690897563045"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-05-inspiration.md",
+          "hash": "15301406716175426208"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-06-design-system.md",
+          "hash": "5383552657735127646"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-07-defining-experience.md",
+          "hash": "5142388714416339424"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-08-visual-foundation.md",
+          "hash": "10319366428340425530"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-09-design-directions.md",
+          "hash": "1175773274617439720"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-10-user-journeys.md",
+          "hash": "8755227540341695179"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-11-component-strategy.md",
+          "hash": "5195977341727293094"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-12-ux-patterns.md",
+          "hash": "8446170691924013395"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-13-responsive-accessibility.md",
+          "hash": "6388256739153335316"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-14-complete.md",
+          "hash": "5106850534375090923"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/ux-design-template.md",
+          "hash": "6910239554713659977"
+        },
+        {
+          "file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/workflow.md",
+          "hash": "17996650011261819232"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-01-document-discovery.md",
+          "hash": "3360688119395617572"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-02-prd-analysis.md",
+          "hash": "11709220613463063608"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-03-epic-coverage-validation.md",
+          "hash": "3199834187745509943"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-04-ux-alignment.md",
+          "hash": "13779359698643576529"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-05-epic-quality-review.md",
+          "hash": "16558021647380150464"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-06-final-assessment.md",
+          "hash": "7116637724979560322"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/templates/readiness-report-template.md",
+          "hash": "5764164338930785967"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/workflow.md",
+          "hash": "13687423754684366005"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/architecture-decision-template.md",
+          "hash": "3985922240680874413"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/data/domain-complexity.csv",
+          "hash": "2669456636217354565"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/data/project-types.csv",
+          "hash": "1085203530622102022"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01-init.md",
+          "hash": "7450066855621705602"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01b-continue.md",
+          "hash": "5048668804550422494"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-02-context.md",
+          "hash": "3527107461386407699"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-03-starter.md",
+          "hash": "15051160828305369606"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-04-decisions.md",
+          "hash": "13649034594844546652"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-05-patterns.md",
+          "hash": "3785385008311214110"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-06-structure.md",
+          "hash": "15954310413412445329"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-07-validation.md",
+          "hash": "10387695484556149050"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-08-complete.md",
+          "hash": "16046757843444472829"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-architecture/workflow.md",
+          "hash": "16295666426817695650"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-01-validate-prerequisites.md",
+          "hash": "16750455053347182384"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-02-design-epics.md",
+          "hash": "17875932556641425706"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-03-create-stories.md",
+          "hash": "18389464620599660466"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-04-final-validation.md",
+          "hash": "17549173136357354683"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/templates/epics-template.md",
+          "hash": "12773290023363210563"
+        },
+        {
+          "file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/workflow.md",
+          "hash": "1211760712607900429"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/code-review/checklist.md",
+          "hash": "4466204938633720862"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/code-review/instructions.xml",
+          "hash": "1682874924670695991"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/code-review/workflow.yaml",
+          "hash": "7432882180020932006"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/correct-course/checklist.md",
+          "hash": "6007572448334050056"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/correct-course/instructions.md",
+          "hash": "3340783901768551437"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/correct-course/workflow.yaml",
+          "hash": "14505487486979494766"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/create-story/checklist.md",
+          "hash": "13757738536740168357"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/create-story/instructions.xml",
+          "hash": "9887874946157871732"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/create-story/template.md",
+          "hash": "2457671092916288064"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/create-story/workflow.yaml",
+          "hash": "3880864546414958691"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/dev-story/checklist.md",
+          "hash": "15551025423553642235"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/dev-story/instructions.xml",
+          "hash": "3178564403170530358"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/dev-story/workflow.yaml",
+          "hash": "13600779114517626783"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/retrospective/instructions.md",
+          "hash": "4805754535248778725"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/retrospective/workflow.yaml",
+          "hash": "10427101923266489988"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-planning/checklist.md",
+          "hash": "5478054915995241315"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-planning/instructions.md",
+          "hash": "348329070797082386"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-planning/sprint-status-template.yaml",
+          "hash": "12802626797554961265"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-planning/workflow.yaml",
+          "hash": "10486188477948032326"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-status/instructions.md",
+          "hash": "5700818316609617089"
+        },
+        {
+          "file": "_bmad/bmm/workflows/4-implementation/sprint-status/workflow.yaml",
+          "hash": "16381731222537041513"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-01-mode-detection.md",
+          "hash": "8621218339488913649"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-02-context-gathering.md",
+          "hash": "4916170199554605408"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-03-execute.md",
+          "hash": "6682137245891345045"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-04-self-check.md",
+          "hash": "3158765542648267510"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-05-adversarial-review.md",
+          "hash": "11429687944641200846"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/steps/step-06-resolve-findings.md",
+          "hash": "3720709574615379147"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/workflow.md",
+          "hash": "11827988316101448759"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/steps/step-01-understand.md",
+          "hash": "3733630394221641236"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/steps/step-02-investigate.md",
+          "hash": "17152799638477912747"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/steps/step-03-generate.md",
+          "hash": "11191292116895990422"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/steps/step-04-review.md",
+          "hash": "18042446368784942050"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/tech-spec-template.md",
+          "hash": "1465757028143246212"
+        },
+        {
+          "file": "_bmad/bmm/workflows/bmad-quick-flow/quick-spec/workflow.md",
+          "hash": "13589594672029442583"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/checklist.md",
+          "hash": "13517806405993629391"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/documentation-requirements.csv",
+          "hash": "2381007643084349864"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/instructions.md",
+          "hash": "885596650608444381"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/templates/deep-dive-template.md",
+          "hash": "2511489597787371349"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/templates/index-template.md",
+          "hash": "376465994295728646"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/templates/project-overview-template.md",
+          "hash": "8548723404852979920"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/templates/project-scan-report-schema.json",
+          "hash": "4727618785737745217"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/templates/source-tree-template.md",
+          "hash": "7581822405268228692"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/workflow.yaml",
+          "hash": "14337812826663616719"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/workflows/deep-dive-instructions.md",
+          "hash": "3924540065183111263"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/workflows/deep-dive.yaml",
+          "hash": "3380637636540065204"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md",
+          "hash": "10090549835154739879"
+        },
+        {
+          "file": "_bmad/bmm/workflows/document-project/workflows/full-scan.yaml",
+          "hash": "6584618557271247980"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/_shared/excalidraw-library.json",
+          "hash": "11676260679569136191"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/_shared/excalidraw-templates.yaml",
+          "hash": "8597143906686603548"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/checklist.md",
+          "hash": "11381881438016342697"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/instructions.md",
+          "hash": "16241944855902505713"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/workflow.yaml",
+          "hash": "10218540176363452069"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/checklist.md",
+          "hash": "7750415217089224158"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/instructions.md",
+          "hash": "16913871730035783073"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/workflow.yaml",
+          "hash": "7949445360852392958"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/checklist.md",
+          "hash": "2426027427623015101"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/instructions.md",
+          "hash": "5491348018663450285"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/workflow.yaml",
+          "hash": "17491783579636199957"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/checklist.md",
+          "hash": "10602734302027199582"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/instructions.md",
+          "hash": "7039253567821860655"
+        },
+        {
+          "file": "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/workflow.yaml",
+          "hash": "14506684889111650012"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/atdd/atdd-checklist-template.md",
+          "hash": "4933696988954156599"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/atdd/checklist.md",
+          "hash": "9438103672018479494"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/atdd/instructions.md",
+          "hash": "11528868276878717181"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/atdd/workflow.yaml",
+          "hash": "5706839399360480203"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/automate/checklist.md",
+          "hash": "1912057055828174206"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/automate/instructions.md",
+          "hash": "12035578874815888272"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/automate/workflow.yaml",
+          "hash": "4169665288766045381"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/ci/checklist.md",
+          "hash": "16024837834480172933"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/ci/github-actions-template.yaml",
+          "hash": "11142422718288313664"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/ci/gitlab-ci-template.yaml",
+          "hash": "1249778206971577327"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/ci/instructions.md",
+          "hash": "13333627230035017693"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/ci/workflow.yaml",
+          "hash": "13373905565561051844"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/framework/checklist.md",
+          "hash": "12454883135309950244"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/framework/instructions.md",
+          "hash": "6517571413736572649"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/framework/workflow.yaml",
+          "hash": "5817651558410244300"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/nfr-assess/checklist.md",
+          "hash": "14286411454757027939"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/nfr-assess/instructions.md",
+          "hash": "15414801710721730731"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/nfr-assess/nfr-report-template.md",
+          "hash": "6010766688232136921"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/nfr-assess/workflow.yaml",
+          "hash": "12101742923431348057"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/checklist.md",
+          "hash": "7542841939675096757"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/instructions.md",
+          "hash": "5072465445200003424"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/test-design-architecture-template.md",
+          "hash": "6075544737065684980"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/test-design-qa-template.md",
+          "hash": "13129724322358218685"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/test-design-template.md",
+          "hash": "9290832685290633211"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-design/workflow.yaml",
+          "hash": "9939803251862865376"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-review/checklist.md",
+          "hash": "4571696994203017571"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-review/instructions.md",
+          "hash": "2734723063467415216"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-review/test-review-template.md",
+          "hash": "9546990924753210168"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/test-review/workflow.yaml",
+          "hash": "7799875174364903053"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/trace/checklist.md",
+          "hash": "12363851051047991953"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/trace/instructions.md",
+          "hash": "10978616852494278850"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/trace/trace-template.md",
+          "hash": "2436056635933939684"
+        },
+        {
+          "file": "_bmad/bmm/workflows/testarch/trace/workflow.yaml",
+          "hash": "9599980824989925665"
+        },
+        {
+          "file": "_bmad/core/agents/bmad-master.md",
+          "hash": "17450321289448204518"
+        },
+        {
+          "file": "_bmad/core/config.yaml",
+          "hash": "1220608559854236739"
+        },
+        {
+          "file": "_bmad/core/module-help.csv",
+          "hash": "2824728802475823723"
+        },
+        {
+          "file": "_bmad/core/resources/excalidraw/README.md",
+          "hash": "17576387241597651378"
+        },
+        {
+          "file": "_bmad/core/resources/excalidraw/excalidraw-helpers.md",
+          "hash": "11675284650519585755"
+        },
+        {
+          "file": "_bmad/core/resources/excalidraw/library-loader.md",
+          "hash": "9714972803384010884"
+        },
+        {
+          "file": "_bmad/core/resources/excalidraw/validate-json-instructions.md",
+          "hash": "14781008478632731216"
+        },
+        {
+          "file": "_bmad/core/tasks/editorial-review-prose.xml",
+          "hash": "16036527119880464080"
+        },
+        {
+          "file": "_bmad/core/tasks/editorial-review-structure.xml",
+          "hash": "16435479042651570988"
+        },
+        {
+          "file": "_bmad/core/tasks/help.md",
+          "hash": "13139095149496096138"
+        },
+        {
+          "file": "_bmad/core/tasks/index-docs.xml",
+          "hash": "13215998760658952801"
+        },
+        {
+          "file": "_bmad/core/tasks/review-adversarial-general.xml",
+          "hash": "770915028445882177"
+        },
+        {
+          "file": "_bmad/core/tasks/shard-doc.xml",
+          "hash": "16232780000554120534"
+        },
+        {
+          "file": "_bmad/core/tasks/workflow.xml",
+          "hash": "12563049721732157422"
+        },
+        {
+          "file": "_bmad/core/workflows/advanced-elicitation/methods.csv",
+          "hash": "4269225937876627502"
+        },
+        {
+          "file": "_bmad/core/workflows/advanced-elicitation/workflow.xml",
+          "hash": "4345094399092078063"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/brain-methods.csv",
+          "hash": "6797318140385168639"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-01-session-setup.md",
+          "hash": "8125333966544144395"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-01b-continue.md",
+          "hash": "6463957893217286804"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-02a-user-selected.md",
+          "hash": "1393478170452097867"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-02b-ai-recommended.md",
+          "hash": "5490183970282564568"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-02c-random-selection.md",
+          "hash": "8955411433499281540"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-02d-progressive-flow.md",
+          "hash": "11612407865392918161"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-03-technique-execution.md",
+          "hash": "6541498196004638360"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/steps/step-04-idea-organization.md",
+          "hash": "17104183065244852452"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/template.md",
+          "hash": "1528142360999965003"
+        },
+        {
+          "file": "_bmad/core/workflows/brainstorming/workflow.md",
+          "hash": "514691720630102558"
+        },
+        {
+          "file": "_bmad/core/workflows/party-mode/steps/step-01-agent-loading.md",
+          "hash": "8640713692144424785"
+        },
+        {
+          "file": "_bmad/core/workflows/party-mode/steps/step-02-discussion-orchestration.md",
+          "hash": "14936049560843388877"
+        },
+        {
+          "file": "_bmad/core/workflows/party-mode/steps/step-03-graceful-exit.md",
+          "hash": "14258063225713621166"
+        },
+        {
+          "file": "_bmad/core/workflows/party-mode/workflow.md",
+          "hash": "15273223250992951788"
+        },
+        {
+          "file": "data/sqlite.db",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "dist/api/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "dist/api/main.js",
+          "hash": "15171567659602691687",
+          "deps": [
+            [
+              "npm:@nestjs/common",
+              "dynamic"
+            ],
+            [
+              "npm:@nestjs/core",
+              "dynamic"
+            ],
+            [
+              "npm:tslib",
+              "dynamic"
+            ],
+            [
+              "npm:@nestjs/passport",
+              "dynamic"
+            ],
+            [
+              "npm:@nestjs/typeorm",
+              "dynamic"
+            ],
+            [
+              "npm:typeorm",
+              "dynamic"
+            ],
+            [
+              "npm:@nestjs/jwt",
+              "dynamic"
+            ],
+            [
+              "npm:passport-jwt",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "dist/api/main.js.map",
+          "hash": "6010351677646779322"
+        },
+        {
+          "file": "dist/api/package-lock.json",
+          "hash": "15312650177225682136"
+        },
+        {
+          "file": "dist/api/package.json",
+          "hash": "16064514605068917054"
+        },
+        {
+          "file": "eslint.config.mjs",
+          "hash": "7311729156798379896",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "6870352021923392442",
+          "deps": [
+            "npm:jest",
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "nx.json",
+          "hash": "9604242326325545887"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "15827476548847713366"
+        },
+        {
+          "file": "package.json",
+          "hash": "7941144246714302531"
+        },
+        {
+          "file": "playwright.config.ts",
+          "hash": "17603789227943951981",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "reports/html/data/0c7ca5b85702aa54cc6325de50c322b3bc905c37.zip",
+          "hash": "18396407092116177415"
+        },
+        {
+          "file": "reports/html/data/15ea7093eff9b752beb95e9ad9c98aff1f8c2747.webm",
+          "hash": "14044147018424254115"
+        },
+        {
+          "file": "reports/html/data/353e0ed919e2bd6d6170146b763003b5d02cbf8e.webm",
+          "hash": "16307856711073978798"
+        },
+        {
+          "file": "reports/html/data/46f981626cda04bdc135d7a058be38282503201d.png",
+          "hash": "7186883893597863225"
+        },
+        {
+          "file": "reports/html/data/5a114220fdde25f601c53675a8caf00ba5ebfb17.zip",
+          "hash": "8431753391518123861"
+        },
+        {
+          "file": "reports/html/data/673580f9005b101343aeef5b732c2a34ffe37234.webm",
+          "hash": "5795084196511187260"
+        },
+        {
+          "file": "reports/html/data/7dd48c940e22ea6d99d18ccda9b6fd74b91d0cb1.png",
+          "hash": "16643722727609007217"
+        },
+        {
+          "file": "reports/html/data/830e3e0783aefe2c897fb62dd5af6aecfcf0732c.webm",
+          "hash": "8434925102201090090"
+        },
+        {
+          "file": "reports/html/data/8df035db87e3f7ca12b32a9fadca6fca9079d9ec.zip",
+          "hash": "3038788485885870266"
+        },
+        {
+          "file": "reports/html/data/ad5ed8cc55c5bc203f84c4c6ede6cff44744bb27.md",
+          "hash": "7945474734598029758"
+        },
+        {
+          "file": "reports/html/data/bab6dd96dbcfeaefa29684e3c05e243f28f3a85c.zip",
+          "hash": "267775398312496562"
+        },
+        {
+          "file": "reports/html/data/f4d105ba987b34180e2ee1cbbe877cbb630646f9.png",
+          "hash": "7394681147278628452"
+        },
+        {
+          "file": "reports/html/index.html",
+          "hash": "72669064325976901"
+        },
+        {
+          "file": "reports/html/trace/assets/codeMirrorModule-a5XoALAZ.js",
+          "hash": "17349073759742420414"
+        },
+        {
+          "file": "reports/html/trace/assets/defaultSettingsView-CJSZINFr.js",
+          "hash": "6921369304187942768"
+        },
+        {
+          "file": "reports/html/trace/codeMirrorModule.DYBRYzYX.css",
+          "hash": "6223841121629943579"
+        },
+        {
+          "file": "reports/html/trace/codicon.DCmgc-ay.ttf",
+          "hash": "12263352823466924738"
+        },
+        {
+          "file": "reports/html/trace/defaultSettingsView.7ch9cixO.css",
+          "hash": "8242875881027193770"
+        },
+        {
+          "file": "reports/html/trace/index.BVu7tZDe.css",
+          "hash": "6709280023832933404"
+        },
+        {
+          "file": "reports/html/trace/index.Bk2uYQRV.js",
+          "hash": "1412539160595145434"
+        },
+        {
+          "file": "reports/html/trace/index.html",
+          "hash": "207903602525727560"
+        },
+        {
+          "file": "reports/html/trace/manifest.webmanifest",
+          "hash": "5842339216350101680"
+        },
+        {
+          "file": "reports/html/trace/playwright-logo.svg",
+          "hash": "1494594836553862900"
+        },
+        {
+          "file": "reports/html/trace/snapshot.html",
+          "hash": "3430660294083944069"
+        },
+        {
+          "file": "reports/html/trace/sw.bundle.js",
+          "hash": "4724030642739835860"
+        },
+        {
+          "file": "reports/html/trace/uiMode.Btcz36p_.css",
+          "hash": "12415931662949180409"
+        },
+        {
+          "file": "reports/html/trace/uiMode.CQJ9SCIQ.js",
+          "hash": "9482895176271206755"
+        },
+        {
+          "file": "reports/html/trace/uiMode.html",
+          "hash": "12639823671730418155"
+        },
+        {
+          "file": "reports/html/trace/xtermModule.DYP7pi_n.css",
+          "hash": "10252563076169958305"
+        },
+        {
+          "file": "test-results/.last-run.json",
+          "hash": "4609011749011855486"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/error-context.md",
+          "hash": "7945474734598029758"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/test-failed-1.png",
+          "hash": "16643722727609007217"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/trace.zip",
+          "hash": "8431753391518123861"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/video.webm",
+          "hash": "5795084196511187260"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/error-context.md",
+          "hash": "7945474734598029758"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/test-failed-1.png",
+          "hash": "7186883893597863225"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/trace.zip",
+          "hash": "267775398312496562"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/video.webm",
+          "hash": "16307856711073978798"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/test-failed-1.png",
+          "hash": "7394681147278628452"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/trace.zip",
+          "hash": "3038788485885870266"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/video.webm",
+          "hash": "14044147018424254115"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-load-homepage-webkit/test-failed-1.png",
+          "hash": "7394681147278628452"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-load-homepage-webkit/trace.zip",
+          "hash": "18396407092116177415"
+        },
+        {
+          "file": "test-results/example-Example-Test-Suite-should-load-homepage-webkit/video.webm",
+          "hash": "8434925102201090090"
+        },
+        {
+          "file": "test-results/junit.xml",
+          "hash": "2622314449631191966"
+        },
+        {
+          "file": "tests/README.md",
+          "hash": "9937798331922400885"
+        },
+        {
+          "file": "tests/e2e/example.spec.ts",
+          "hash": "11175516224641630147"
+        },
+        {
+          "file": "tests/support/fixtures/factories/user-factory.ts",
+          "hash": "7926538050933114598",
+          "deps": [
+            "npm:@faker-js/faker"
+          ]
+        },
+        {
+          "file": "tests/support/fixtures/index.ts",
+          "hash": "2115303682631873902",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "16936441711144470533"
+        }
+      ],
+      "api": [
+        {
+          "file": "api/data-source.ts",
+          "hash": "4945786431803637877",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "api/eslint.config.mjs",
+          "hash": "9036454466467975933"
+        },
+        {
+          "file": "api/jest.config.cts",
+          "hash": "5384018571856810310"
+        },
+        {
+          "file": "api/project.json",
+          "hash": "14507723075111113963"
+        },
+        {
+          "file": "api/scripts/run-migrations.ts",
+          "hash": "9450558542685350565"
+        },
+        {
+          "file": "api/scripts/seed-admin.ts",
+          "hash": "8480481246330929456"
+        },
+        {
+          "file": "api/src/app/app.controller.spec.ts",
+          "hash": "7647647754668916054",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "api/src/app/app.controller.ts",
+          "hash": "12817325363067886725",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "api/src/app/app.module.ts",
+          "hash": "8546710331000171473",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "api/src/app/app.service.spec.ts",
+          "hash": "13111976464657524091",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "api/src/app/app.service.ts",
+          "hash": "9967902337593410053",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "api/src/app/dev.controller.ts",
+          "hash": "4532330498252664910",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "api/src/main.ts",
+          "hash": "14244403322143362372",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/__tests__/auth.controller.spec.ts",
+          "hash": "12316466941912555220",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/__tests__/auth.service.spec.ts",
+          "hash": "9010873399510100737",
+          "deps": [
+            "npm:@nestjs/testing",
+            "npm:@nestjs/jwt"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/auth.controller.ts",
+          "hash": "9207097792893994956",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/auth.module.ts",
+          "hash": "13003518040856392037",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/auth.service.ts",
+          "hash": "3593033879560222952",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/dto/login.dto.ts",
+          "hash": "15724725402820396043"
+        },
+        {
+          "file": "api/src/modules/auth/dto/register.dto.ts",
+          "hash": "11714757254169211752"
+        },
+        {
+          "file": "api/src/modules/auth/entities/user.entity.ts",
+          "hash": "8477788116877062736",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/jwt-auth.guard.ts",
+          "hash": "490308030298999117",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/jwt.strategy.ts",
+          "hash": "3955498318480122418",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport",
+            "npm:passport-jwt"
+          ]
+        },
+        {
+          "file": "api/src/modules/auth/users.service.ts",
+          "hash": "12001489257163413471",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "api/tsconfig.app.json",
+          "hash": "4975840368894154052"
+        },
+        {
+          "file": "api/tsconfig.json",
+          "hash": "9420862676426701392"
+        },
+        {
+          "file": "api/tsconfig.spec.json",
+          "hash": "16514264766063949355"
+        },
+        {
+          "file": "api/webpack.config.js",
+          "hash": "417783434150906803",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "api-e2e": [
+        {
+          "file": "api-e2e/eslint.config.mjs",
+          "hash": "9036454466467975933"
+        },
+        {
+          "file": "api-e2e/jest.config.cts",
+          "hash": "10367738628900882749"
+        },
+        {
+          "file": "api-e2e/project.json",
+          "hash": "14560084232126878530"
+        },
+        {
+          "file": "api-e2e/src/api/api.spec.ts",
+          "hash": "110394728024017389",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "api-e2e/tsconfig.json",
+          "hash": "2346920493880922870"
+        },
+        {
+          "file": "api-e2e/tsconfig.spec.json",
+          "hash": "14226830188665428950"
+        }
+      ],
+      "mobile": [
+        {
+          "file": "apps/mobile/.babelrc.js",
+          "hash": "2541644753819891142"
+        },
+        {
+          "file": "apps/mobile/Gemfile",
+          "hash": "2090536375223830271"
+        },
+        {
+          "file": "apps/mobile/android/app/build.gradle",
+          "hash": "11016832123465815178"
+        },
+        {
+          "file": "apps/mobile/android/app/debug.keystore",
+          "hash": "5037686243849261810"
+        },
+        {
+          "file": "apps/mobile/android/app/proguard-rules.pro",
+          "hash": "13814197385154279786"
+        },
+        {
+          "file": "apps/mobile/android/app/src/debug/AndroidManifest.xml",
+          "hash": "9217300540490017338"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/AndroidManifest.xml",
+          "hash": "8439592262627536205"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/java/com/mobile/MainActivity.kt",
+          "hash": "7395652555370996514"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/java/com/mobile/MainApplication.kt",
+          "hash": "8702663368597825743"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/drawable/rn_edit_text_material.xml",
+          "hash": "617140720749664772"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "hash": "10788509195642110029"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+          "hash": "14348562046770238248"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "hash": "328692529308011025"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+          "hash": "11802043336826859502"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "hash": "13006206334539413900"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+          "hash": "1812825738055967771"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "6104457872863500683"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+          "hash": "2478168592410677995"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "12283149652938275290"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+          "hash": "7126668675123994836"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/values/strings.xml",
+          "hash": "14432769972268793573"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/values/styles.xml",
+          "hash": "14052910750539201041"
+        },
+        {
+          "file": "apps/mobile/android/build.gradle",
+          "hash": "14061614575239421399"
+        },
+        {
+          "file": "apps/mobile/android/gradle.properties",
+          "hash": "13198926122350436103"
+        },
+        {
+          "file": "apps/mobile/android/gradle/wrapper/gradle-wrapper.jar",
+          "hash": "9604422019378236896"
+        },
+        {
+          "file": "apps/mobile/android/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "5511192720181303110"
+        },
+        {
+          "file": "apps/mobile/android/gradlew",
+          "hash": "670712297527443547"
+        },
+        {
+          "file": "apps/mobile/android/gradlew.bat",
+          "hash": "3049992198610835351"
+        },
+        {
+          "file": "apps/mobile/android/settings.gradle",
+          "hash": "5530181409791734526"
+        },
+        {
+          "file": "apps/mobile/app.json",
+          "hash": "1390605817244549130"
+        },
+        {
+          "file": "apps/mobile/index.html",
+          "hash": "7901659139386864767"
+        },
+        {
+          "file": "apps/mobile/ios/.xcode.env",
+          "hash": "2240437479405059044"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile.xcodeproj/project.pbxproj",
+          "hash": "4618348604485384453"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile.xcodeproj/xcshareddata/xcschemes/Mobile.xcscheme",
+          "hash": "2100166912833391617"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile.xcworkspace/contents.xcworkspacedata",
+          "hash": "4443681364068720490"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/AppDelegate.swift",
+          "hash": "3581625987589401462"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/Images.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "11595540762170193386"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/Images.xcassets/Contents.json",
+          "hash": "16272710630576636421"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/Info.plist",
+          "hash": "13755999528262985434"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/LaunchScreen.storyboard",
+          "hash": "2815857110774114531"
+        },
+        {
+          "file": "apps/mobile/ios/Mobile/PrivacyInfo.xcprivacy",
+          "hash": "16670914145149810597"
+        },
+        {
+          "file": "apps/mobile/ios/Podfile",
+          "hash": "7841429425631056581"
+        },
+        {
+          "file": "apps/mobile/metro.config.js",
+          "hash": "16922012532652362214",
+          "deps": [
+            "npm:@nx/react-native",
+            "npm:@react-native/metro-config",
+            "npm:react-native-svg-transformer"
+          ]
+        },
+        {
+          "file": "apps/mobile/package.json",
+          "hash": "13178917518193536281",
+          "deps": [
+            "npm:@react-native/metro-config",
+            "npm:react",
+            "npm:react-native",
+            "npm:react-native-svg",
+            "npm:metro-config"
+          ]
+        },
+        {
+          "file": "apps/mobile/project.json",
+          "hash": "1635971388740467770"
+        },
+        {
+          "file": "apps/mobile/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/mobile/src/app/App.tsx",
+          "hash": "3195308419825511606",
+          "deps": [
+            "npm:react",
+            "npm:react-native",
+            "npm:react-native-svg"
+          ]
+        },
+        {
+          "file": "apps/mobile/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/mobile/src/main-web.tsx",
+          "hash": "16557523666118970951",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/mobile/src/main.tsx",
+          "hash": "9434940819290177420",
+          "deps": [
+            "npm:react-native"
+          ]
+        },
+        {
+          "file": "apps/mobile/tsconfig.app.json",
+          "hash": "4680003059193871292"
+        },
+        {
+          "file": "apps/mobile/tsconfig.json",
+          "hash": "7759624752786837311"
+        },
+        {
+          "file": "apps/mobile/vite.config.mts",
+          "hash": "6616781165107874180",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite",
+            "npm:esbuild"
+          ]
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "1468857662678599949"
+}

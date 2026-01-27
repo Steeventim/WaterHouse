@@ -1,0 +1,257 @@
+<testsuites id="" name="" tests="6" failures="4" skipped="0" errors="0" time="36.379175000000004">
+<testsuite name="example.spec.ts" timestamp="2026-01-27T14:24:23.201Z" hostname="chromium" tests="2" failures="1" skipped="0" time="20.295" errors="0">
+<testcase name="Example Test Suite › should load homepage" classname="example.spec.ts" time="2.571">
+</testcase>
+<testcase name="Example Test Suite › should create user and login" classname="example.spec.ts" time="17.724">
+<failure message="example.spec.ts:10:7 should create user and login" type="FAILURE">
+<![CDATA[  [chromium] › example.spec.ts:10:7 › Example Test Suite › should create user and login ────────────
+
+    TimeoutError: page.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('[data-testid="email-input"]')
+
+
+      12 |
+      13 |     await page.goto('/login');
+    > 14 |     await page.fill('[data-testid="email-input"]', user.email);
+         |                ^
+      15 |     await page.fill('[data-testid="password-input"]', user.password);
+      16 |     await page.click('[data-testid="login-button"]');
+      17 |
+        at /home/tims/Dev1.0/WaterHouse/tests/e2e/example.spec.ts:14:16
+
+    TypeError: fetch failed
+
+       at ../support/fixtures/factories/user-factory.ts:47
+
+      45 |   async cleanup() {
+      46 |     for (const userId of this.createdUsers) {
+    > 47 |       await fetch(`${process.env.API_URL}/users/${userId}`, { method: 'DELETE' });
+         |       ^
+      48 |     }
+      49 |     this.createdUsers = [];
+      50 |   }
+        at UserFactory.cleanup (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/factories/user-factory.ts:47:7)
+        at Object.userFactory (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/index.ts:12:5)
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:3001
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/example-Example-Test-Suite-should-create-user-and-login-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-chromium/video.webm]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-chromium/error-context.md]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-chromium/trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[UserFactory.createUser network failed for URL=http://localhost:3001/api/users: fetch failed — falling back to local user
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2026-01-27T14:24:23.201Z" hostname="firefox" tests="2" failures="1" skipped="0" time="23.415" errors="0">
+<testcase name="Example Test Suite › should load homepage" classname="example.spec.ts" time="4.416">
+</testcase>
+<testcase name="Example Test Suite › should create user and login" classname="example.spec.ts" time="18.999">
+<failure message="example.spec.ts:10:7 should create user and login" type="FAILURE">
+<![CDATA[  [firefox] › example.spec.ts:10:7 › Example Test Suite › should create user and login ─────────────
+
+    TimeoutError: page.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('[data-testid="email-input"]')
+
+
+      12 |
+      13 |     await page.goto('/login');
+    > 14 |     await page.fill('[data-testid="email-input"]', user.email);
+         |                ^
+      15 |     await page.fill('[data-testid="password-input"]', user.password);
+      16 |     await page.click('[data-testid="login-button"]');
+      17 |
+        at /home/tims/Dev1.0/WaterHouse/tests/e2e/example.spec.ts:14:16
+
+    TypeError: fetch failed
+
+       at ../support/fixtures/factories/user-factory.ts:47
+
+      45 |   async cleanup() {
+      46 |     for (const userId of this.createdUsers) {
+    > 47 |       await fetch(`${process.env.API_URL}/users/${userId}`, { method: 'DELETE' });
+         |       ^
+      48 |     }
+      49 |     this.createdUsers = [];
+      50 |   }
+        at UserFactory.cleanup (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/factories/user-factory.ts:47:7)
+        at Object.userFactory (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/index.ts:12:5)
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:3001
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/example-Example-Test-Suite-should-create-user-and-login-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-firefox/video.webm]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-firefox/error-context.md]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-firefox/trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[UserFactory.createUser network failed for URL=http://localhost:3001/api/users: fetch failed — falling back to local user
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2026-01-27T14:24:23.201Z" hostname="webkit" tests="2" failures="2" skipped="0" time="4.473" errors="0">
+<testcase name="Example Test Suite › should load homepage" classname="example.spec.ts" time="2.077">
+<failure message="example.spec.ts:4:7 should load homepage" type="FAILURE">
+<![CDATA[  [webkit] › example.spec.ts:4:7 › Example Test Suite › should load homepage ───────────────────────
+
+    Error: page.goto: WebKit encountered an internal error
+    Call log:
+      - navigating to "http://localhost:3000/", waiting until "load"
+
+
+      3 | test.describe('Example Test Suite', () => {
+      4 |   test('should load homepage', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     // Be tolerant: accept common dev title or 'Home'
+      7 |     await expect(page).toHaveTitle(/Vite|Home/i);
+      8 |   });
+        at /home/tims/Dev1.0/WaterHouse/tests/e2e/example.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-load-homepage-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-load-homepage-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-load-homepage-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/example-Example-Test-Suite-should-load-homepage-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|example-Example-Test-Suite-should-load-homepage-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-load-homepage-webkit/video.webm]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-load-homepage-webkit/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Example Test Suite › should create user and login" classname="example.spec.ts" time="2.396">
+<failure message="example.spec.ts:10:7 should create user and login" type="FAILURE">
+<![CDATA[  [webkit] › example.spec.ts:10:7 › Example Test Suite › should create user and login ──────────────
+
+    Error: page.goto: WebKit encountered an internal error
+    Call log:
+      - navigating to "http://localhost:3000/login", waiting until "load"
+
+
+      11 |     const user = await userFactory.createUser();
+      12 |
+    > 13 |     await page.goto('/login');
+         |                ^
+      14 |     await page.fill('[data-testid="email-input"]', user.email);
+      15 |     await page.fill('[data-testid="password-input"]', user.password);
+      16 |     await page.click('[data-testid="login-button"]');
+        at /home/tims/Dev1.0/WaterHouse/tests/e2e/example.spec.ts:13:16
+
+    TypeError: fetch failed
+
+       at ../support/fixtures/factories/user-factory.ts:47
+
+      45 |   async cleanup() {
+      46 |     for (const userId of this.createdUsers) {
+    > 47 |       await fetch(`${process.env.API_URL}/users/${userId}`, { method: 'DELETE' });
+         |       ^
+      48 |     }
+      49 |     this.createdUsers = [];
+      50 |   }
+        at UserFactory.cleanup (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/factories/user-factory.ts:47:7)
+        at Object.userFactory (/home/tims/Dev1.0/WaterHouse/tests/support/fixtures/index.ts:12:5)
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:3001
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/example-Example-Test-Suite-should-create-user-and-login-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-webkit/video.webm]]
+
+[[ATTACHMENT|example-Example-Test-Suite-should-create-user-and-login-webkit/trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[UserFactory.createUser network failed for URL=http://localhost:3001/api/users: fetch failed — falling back to local user
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>
