@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export class InitSchema0001 implements MigrationInterface {
-  name = 'InitSchema0001';
+export class InitSchema1700000000001 implements MigrationInterface {
+  name = 'InitSchema1700000000001';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     // SQLite create table for users

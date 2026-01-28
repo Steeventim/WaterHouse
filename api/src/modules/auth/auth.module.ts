@@ -5,7 +5,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
 import { UsersService } from './users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserEntity } from './entities/user.entity';
+import { User } from './entities/user.entity';
+import { OtpRequest } from './entities/otp-request.entity';
+import { SmsService } from './sms.service';
 
 @Module({
   imports: [
@@ -13,10 +15,10 @@ import { UserEntity } from './entities/user.entity';
       secret: process.env.JWT_SECRET || 'DEV_SECRET',
       signOptions: { expiresIn: '1h' },
     }),
-    TypeOrmModule.forFeature([UserEntity]),
+    TypeOrmModule.forFeature([User, OtpRequest]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, UsersService, JwtStrategy],
+  providers: [AuthService, UsersService, JwtStrategy, SmsService],
   exports: [AuthService, UsersService],
 })
 export class AuthModule {}

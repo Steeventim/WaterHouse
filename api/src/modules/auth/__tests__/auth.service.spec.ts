@@ -7,8 +7,8 @@ describe('AuthService', () => {
   let service: AuthService;
 
   const mockUsersService = {
-    findByUsername: (username: string) => {
-      if (username === 'admin') return Promise.resolve({ id: 1, username: 'admin', password: 'password', role: 'admin' });
+    findByPhoneNumber: (phoneNumber: string) => {
+      if (phoneNumber === '+225000000000') return Promise.resolve({ id: 'admin', phoneNumber: '+225000000000', role: 'admin', name: 'Admin', isActive: true });
       return Promise.resolve(null);
     },
   };
@@ -30,19 +30,11 @@ describe('AuthService', () => {
     await expect(service.verifyOtp('+2250102030405', '000000', requestId)).rejects.toThrow(BadRequestException);
   });
 
-  it('validates correct credentials', async () => {
-    const user = await service.validateUser('admin', 'password');
-    expect(user).toBeDefined();
-    expect((user as any).username).toBe('admin');
-  });
 
-  it('rejects wrong credentials', async () => {
-    const user = await service.validateUser('admin', 'bad');
-    expect(user).toBeNull();
-  });
+  // Plus de validateUser : login par OTP uniquement
 
   it('returns token on login', async () => {
-    const res = await service.login({ id: 1, username: 'admin', role: 'admin' });
+    const res = await service.login({ id: 'admin', phoneNumber: '+225000000000', role: 'admin' });
     expect(res.accessToken).toBe('signed-token');
   });
 });

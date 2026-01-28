@@ -1,5 +1,2 @@
-export class RegisterDto {
-  username: string;
-  password: string;
-  email?: string;
-}
+
+// RegisterDto supprimé : enregistrement par OTP/phoneNumber

@@ -1,10 +1,11 @@
 import { DataSource } from 'typeorm';
-import { UserEntity } from './src/modules/auth/entities/user.entity';
+import { User } from './src/modules/auth/entities/user.entity';
+import { OtpRequest } from './src/modules/auth/entities/otp-request.entity';
 
 const options: any = {
   type: 'sqlite',
   database: process.env.DB_PATH || 'data/sqlite.db',
-  entities: [UserEntity],
+  entities: [User, OtpRequest],
   migrations: ['api/migrations/*{.ts,.js}'],
 };
 

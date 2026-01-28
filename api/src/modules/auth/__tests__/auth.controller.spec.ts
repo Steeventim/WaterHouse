@@ -12,12 +12,10 @@ describe('AuthController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [AuthController],
-      providers: [{ provide: 'AuthService', useValue: mockAuthService }],
-    })
-      .overrideProvider('AuthService')
-      .useValue(mockAuthService)
-      .compile();
-
+      providers: [
+        { provide: require('../auth.service').AuthService, useValue: mockAuthService },
+      ],
+    }).compile();
     controller = module.get<AuthController>(AuthController);
   });
 

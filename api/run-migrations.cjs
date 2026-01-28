@@ -1,7 +1,7 @@
 // CommonJS runner that loads the TypeScript data-source via the wrapper and runs migrations
 (async () => {
   try {
-    const dataSource = require('./data-source.cjs');
+    const dataSource = require('./data-source.js');
     const ds = await dataSource.initialize();
     console.log('Running migrations...');
     await ds.runMigrations();

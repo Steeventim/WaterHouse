@@ -4441,6 +4441,11 @@
   },
   {
     "source": "npm:@nestjs/common",
+    "target": "npm:class-validator",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/common",
     "target": "npm:reflect-metadata",
     "type": "static"
   },
@@ -10565,6 +10570,21 @@
     "type": "static"
   },
   {
+    "source": "npm:class-validator",
+    "target": "npm:@types/validator",
+    "type": "static"
+  },
+  {
+    "source": "npm:class-validator",
+    "target": "npm:libphonenumber-js",
+    "type": "static"
+  },
+  {
+    "source": "npm:class-validator",
+    "target": "npm:validator",
+    "type": "static"
+  },
+  {
     "source": "npm:cli-cursor",
     "target": "npm:restore-cursor",
     "type": "static"
@@ -15352,6 +15372,21 @@
   {
     "source": "npm:whatwg-url@12.0.1",
     "target": "npm:webidl-conversions@7.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:json2csv",
+    "target": "npm:@streamparser/json",
+    "type": "static"
+  },
+  {
+    "source": "npm:json2csv",
+    "target": "npm:commander@6.2.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:json2csv",
+    "target": "npm:lodash.get",
     "type": "static"
   },
   {
@@ -21322,6 +21357,41 @@
   {
     "source": "npm:tunnel-agent",
     "target": "npm:safe-buffer",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:axios",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:dayjs",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:https-proxy-agent",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:jsonwebtoken",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:qs",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:scmp",
+    "type": "static"
+  },
+  {
+    "source": "npm:twilio",
+    "target": "npm:xmlbuilder",
     "type": "static"
   },
   {

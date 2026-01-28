@@ -1,6 +1,7 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from './users.service';
+import { SmsService } from './sms.service';
 
 type OtpRecord = {
   phoneNumber: string;
@@ -13,11 +14,12 @@ type OtpRecord = {
 
 interface User {
   id: string;
-  username?: string;
-  phoneNumber?: string;
+  phoneNumber: string;
   role?: string;
   name?: string;
-  password?: string;
+  isActive?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 @Injectable()
@@ -27,10 +29,32 @@ export class AuthService {
   constructor(
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
+    private readonly smsService: SmsService,
   ) {}
 
+  // Réinitialisation OTP par l’admin
+  async resetOtp(userId: string) {
+    const user = await this.usersService['repo']
+      ? await this.usersService['repo'].findOne({ where: { id: userId } })
+      : this.usersService.allUsers.find(u => u.id === userId);
+    if (!user) throw new BadRequestException('User not found');
+    const otp = this.generateOtp();
+    const requestId = this.generateRequestId();
+    const expiresAt = Date.now() + 5 * 60 * 1000;
+    this.store.set(user.phoneNumber, {
+      phoneNumber: user.phoneNumber,
+      otp,
+      requestId,
+      expiresAt,
+      attempts: 0,
+      isUsed: false,
+    });
+    await this.smsService.sendSms(user.phoneNumber, `Votre nouveau code OTP est : ${otp}`);
+    return { success: true, message: 'OTP reset and sent', requestId };
+  }
+
   // Public API - OTP flow
-  async sendOtp(phoneNumber: string): Promise<{ success: boolean; message: string; requestId: string }> {
+  async sendOtp(phoneNumber: string): Promise<{ success: boolean; message: string; requestId: string; otp?: string }> {
     const otp = this.generateOtp();
     const requestId = this.generateRequestId();
     const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
@@ -46,8 +70,13 @@ export class AuthService {
 
     this.store.set(requestId, record);
 
-    // TODO: integrate Africa's Talking SMS provider here
-    return { success: true, message: 'OTP sent successfully', requestId };
+    // Envoi OTP via provider SMS (Twilio ou mock)
+    const smsRes = await this.smsService.sendSms(phoneNumber, `Votre code OTP est : ${otp}`);
+    const baseRes = { success: smsRes.success, message: smsRes.success ? 'OTP sent successfully' : 'OTP failed', requestId };
+    if (process.env.NODE_ENV === 'test') {
+      return { ...baseRes, otp };
+    }
+    return baseRes;
   }
 
   async verifyOtp(phoneNumber: string, otp: string, requestId: string): Promise<any> {
@@ -77,27 +106,23 @@ export class AuthService {
     rec.isUsed = true;
     this.store.set(requestId, rec);
 
-    // Simulate token generation; replace with real JWT claims in production
+    // Génère un vrai JWT pour permettre l'accès au profil
+    const user = { id: 'user_123', phoneNumber, role: 'collector', name: 'Demo User' };
+    const payload = { phoneNumber: user.phoneNumber, sub: user.id, role: user.role };
+    const accessToken = this.jwtService.sign(payload);
     return {
-      accessToken: 'fake-access-token',
+      accessToken,
       refreshToken: 'fake-refresh-token',
-      user: { id: 'user_123', phoneNumber, role: 'collector', name: 'Demo User' },
+      user,
       expiresIn: 3600,
     };
   }
 
-  // Public API - classic username/password flows (supporting future expansion)
-  async validateUser(username: string, pass: string): Promise<Partial<User> | null> {
-    const user = await this.usersService.findByUsername(username);
-    if (user && user.password === pass) {
-      const { password, ...rest } = user as any;
-      return rest;
-    }
-    return null;
-  }
+
+  // Plus de login username/password : tout passe par OTP
 
   async login(user: any): Promise<{ accessToken: string; user: any }> {
-    const payload = { username: user.username, sub: user.id, role: user.role };
+    const payload = { phoneNumber: user.phoneNumber, sub: user.id, role: user.role };
     return {
       accessToken: this.jwtService.sign(payload),
       user,
