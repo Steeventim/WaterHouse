@@ -730,7 +730,8 @@
               "test",
               "test:e2e",
               "migrate:run",
-              "migrate:gen"
+              "migrate:gen",
+              "migrate"
             ]
           },
           "description": "",
@@ -786,6 +787,18 @@
             "metadata": {
               "scriptContent": "echo \"Use TypeORM CLI or generate manually using data-source.ts\" && exit 0",
               "runCommand": "npm run migrate:gen"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "migrate": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "migrate"
+            },
+            "metadata": {
+              "scriptContent": "node ./api/apply-migration.js",
+              "runCommand": "npm run migrate"
             },
             "configurations": {},
             "parallelism": true
@@ -17321,6 +17334,16 @@
       }
     ],
     "api": [
+      {
+        "source": "api",
+        "target": "npm:sqlite3",
+        "type": "static"
+      },
+      {
+        "source": "api",
+        "target": "npm:ts-node",
+        "type": "static"
+      },
       {
         "source": "api",
         "target": "npm:typeorm",
@@ -40577,5 +40600,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1769528247852
+  "computedAt": 1769531986300
 }

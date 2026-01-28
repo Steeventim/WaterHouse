@@ -1,21 +1,21 @@
 {
   "run": {
-    "command": "nx serve api --verbose",
-    "startTime": "2026-01-27T15:37:11.906Z",
-    "endTime": "2026-01-27T15:41:24.382Z",
+    "command": "nx test api --silent",
+    "startTime": "2026-01-27T16:39:47.454Z",
+    "endTime": "2026-01-27T16:40:23.350Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "api:build",
-      "target": "build",
+      "taskId": "api:test",
+      "target": "test",
       "projectName": "api",
-      "hash": "3780951253923073404",
-      "startTime": "2026-01-27T15:37:12.003Z",
-      "endTime": "2026-01-27T15:37:24.675Z",
+      "hash": "9610939334208587029",
+      "startTime": "2026-01-27T16:39:47.525Z",
+      "endTime": "2026-01-27T16:40:23.308Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 0
+      "status": 1
     }
   ]
 }

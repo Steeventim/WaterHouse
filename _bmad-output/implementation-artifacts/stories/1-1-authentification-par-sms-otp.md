@@ -1,12 +1,12 @@
 ---
-story_id: "1.1"
-story_key: "1-1-authentification-par-sms-otp"
-epic: "Epic 1: Authentification et Accès Sécurisé"
-title: "Authentification par SMS OTP"
-status: "ready-for-dev"
-assignee: ""
-created: "2026-01-27"
-updated: "2026-01-27"
+story_id: '1.1'
+story_key: '1-1-authentification-par-sms-otp'
+epic: 'Epic 1: Authentification et Accès Sécurisé'
+title: 'Authentification par SMS OTP'
+status: 'in-progress'
+assignee: ''
+created: '2026-01-27'
+updated: '2026-01-27'
 ---
 
 # Story 1.1: Authentification par SMS OTP
@@ -149,7 +149,7 @@ CREATE INDEX idx_otp_requests_expires ON otp_requests(expires_at);
 export const africasTalkingConfig = {
   apiKey: process.env.AFRICAS_TALKING_API_KEY,
   username: process.env.AFRICAS_TALKING_USERNAME,
-  senderId: process.env.AFRICAS_TALKING_SENDER_ID || "WATERHOUSE",
+  senderId: process.env.AFRICAS_TALKING_SENDER_ID || 'WATERHOUSE',
 };
 ```
 
@@ -196,7 +196,7 @@ interface AuthState {
 interface User {
   id: string;
   phoneNumber: string;
-  role: "collector" | "manager" | "admin";
+  role: 'collector' | 'manager' | 'admin';
   name: string;
 }
 ```
@@ -212,8 +212,8 @@ export const authApi = baseApi.injectEndpoints({
       { phoneNumber: string }
     >({
       query: (body) => ({
-        url: "/auth/send-otp",
-        method: "POST",
+        url: '/auth/send-otp',
+        method: 'POST',
         body,
       }),
     }),
@@ -222,8 +222,8 @@ export const authApi = baseApi.injectEndpoints({
       { phoneNumber: string; otp: string; requestId: string }
     >({
       query: (body) => ({
-        url: "/auth/verify-otp",
-        method: "POST",
+        url: '/auth/verify-otp',
+        method: 'POST',
         body,
       }),
     }),

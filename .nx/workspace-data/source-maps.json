@@ -1286,6 +1286,10 @@
       "package.json",
       "nx/core/package-json"
     ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "package.json",
+      "nx/core/package-json"
+    ],
     "metadata.description": [
       "package.json",
       "nx/core/package-json"
@@ -1423,6 +1427,34 @@
       "nx/core/package-json"
     ],
     "targets.migrate:gen.metadata.runCommand": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.executor": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.options": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.metadata": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.options.script": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.metadata.scriptContent": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.migrate.metadata.runCommand": [
       "package.json",
       "nx/core/package-json"
     ],

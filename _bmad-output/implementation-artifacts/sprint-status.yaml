@@ -42,7 +42,7 @@ story_location: {project-root}/_bmad-output/implementation-artifacts
 development_status:
   # Epic 1: Authentification et Accès Sécurisé
   epic-1: in-progress
-  1-1-authentification-par-sms-otp: ready-for-dev
+  1-1-authentification-par-sms-otp: in-progress
   1-2-acces-rapide-par-pin-biometrie: backlog
   1-3-deconnexion-automatique: backlog
   1-4-chiffrement-des-donnees-sensibles: backlog

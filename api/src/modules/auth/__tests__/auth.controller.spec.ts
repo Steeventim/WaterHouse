@@ -1,35 +1,34 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthController } from '../auth.controller';
-import { AuthService } from '../auth.service';
 
 describe('AuthController', () => {
   let controller: AuthController;
 
+  const mockAuthService = {
+    sendOtp: jest.fn().mockResolvedValue({ success: true, message: 'OTP sent successfully', requestId: 'req_1' }),
+    verifyOtp: jest.fn().mockResolvedValue({ accessToken: 'token', user: { id: 'user_123' } }),
+  };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [AuthController],
-      providers: [
-        {
-          provide: AuthService,
-          useValue: {
-            validateUser: (u: string, p: string) => (u === 'admin' && p === 'password' ? { id: 1, username: 'admin' } : null),
-            login: (user: any) => ({ accessToken: 'signed-token', user }),
-          },
-        },
-      ],
-    }).compile();
+      providers: [{ provide: 'AuthService', useValue: mockAuthService }],
+    })
+      .overrideProvider('AuthService')
+      .useValue(mockAuthService)
+      .compile();
 
     controller = module.get<AuthController>(AuthController);
   });
 
-  it('returns error on invalid login', async () => {
-    const res = await controller.login({ username: 'admin', password: 'bad' } as any);
-    expect(res).toEqual({ error: 'Invalid credentials' });
+  it('sendOtp returns requestId', async () => {
+    const res = await controller.sendOtp({ phoneNumber: '+2250102030405' });
+    expect(res).toHaveProperty('requestId');
   });
 
-  it('returns token on valid login', async () => {
-    const res: any = await controller.login({ username: 'admin', password: 'password' } as any);
-    expect(res.accessToken).toBe('signed-token');
-    expect(res.user.username).toBe('admin');
+  it('verifyOtp returns token and user', async () => {
+    const res = await controller.verifyOtp({ phoneNumber: '+2250102030405', otp: '123456', requestId: 'req_1' });
+    expect(res).toHaveProperty('accessToken');
+    expect(res.user).toBeDefined();
   });
 });
