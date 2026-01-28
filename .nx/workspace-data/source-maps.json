@@ -1290,6 +1290,10 @@
       "package.json",
       "nx/core/package-json"
     ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "package.json",
+      "nx/core/package-json"
+    ],
     "metadata.description": [
       "package.json",
       "nx/core/package-json"
@@ -1399,6 +1403,34 @@
       "nx/core/package-json"
     ],
     "targets.migrate:run.metadata.runCommand": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.executor": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.options": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.metadata": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.options.script": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.metadata.scriptContent": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.archive:old-logs.metadata.runCommand": [
       "package.json",
       "nx/core/package-json"
     ],

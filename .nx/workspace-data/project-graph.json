@@ -730,6 +730,7 @@
               "test",
               "test:e2e",
               "migrate:run",
+              "archive:old-logs",
               "migrate:gen",
               "migrate"
             ]
@@ -775,6 +776,18 @@
             "metadata": {
               "scriptContent": "ts-node ./api/scripts/run-migrations.ts",
               "runCommand": "npm run migrate:run"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "archive:old-logs": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "archive:old-logs"
+            },
+            "metadata": {
+              "scriptContent": "ts-node ./api/src/modules/communication/scripts/archive-old-logs.ts",
+              "runCommand": "npm run archive:old-logs"
             },
             "configurations": {},
             "parallelism": true
@@ -40800,5 +40813,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1769611559680
+  "computedAt": 1769616358785
 }

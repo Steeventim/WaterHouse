@@ -4,6 +4,9 @@ import request from 'supertest';
 import { AuthController } from '../auth.controller';
 import { AuthService } from '../auth.service';
 import { UsersService } from '../users.service';
+import { PinCodeService } from '../pin-code.service';
+import { BiometricKeyService } from '../biometric-key.service';
+import { RefreshTokenService } from '../refresh-token.service';
 import { JwtAuthGuard } from '../jwt-auth.guard';
 import { JwtService } from '@nestjs/jwt';
 import { SmsService } from '../sms.service';
@@ -37,6 +40,15 @@ class MockJwtAuthGuard {
   }
 }
 
+// Mock PinCodeService
+class MockPinCodeService {}
+
+// Mock BiometricKeyService
+class MockBiometricKeyService {}
+
+// Mock RefreshTokenService
+class MockRefreshTokenService {}
+
 describe('POST /auth/users/:id/reset-otp (integration, mock)', () => {
   let app: INestApplication;
   let smsService: MockSmsService;
@@ -48,6 +60,9 @@ describe('POST /auth/users/:id/reset-otp (integration, mock)', () => {
       providers: [
         AuthService,
         { provide: UsersService, useClass: MockUsersService },
+        { provide: PinCodeService, useClass: MockPinCodeService },
+        { provide: BiometricKeyService, useClass: MockBiometricKeyService },
+        { provide: RefreshTokenService, useClass: MockRefreshTokenService },
         { provide: JwtService, useValue: { sign: () => 'token', verify: () => ({}) } },
         { provide: SmsService, useClass: MockSmsService },
       ],

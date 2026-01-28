@@ -6,6 +6,7 @@
     "test": "nx test",
     "test:e2e": "npx playwright test",
     "migrate:run": "ts-node ./api/scripts/run-migrations.ts",
+    "archive:old-logs": "ts-node ./api/src/modules/communication/scripts/archive-old-logs.ts",
     "migrate:gen": "echo \"Use TypeORM CLI or generate manually using data-source.ts\" && exit 0",
     "migrate": "node ./api/apply-migration.js"
   },

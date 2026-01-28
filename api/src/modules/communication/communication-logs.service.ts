@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CommunicationLog } from './communication-log.entity';
 import { Parser as Json2csvParser } from 'json2csv';
+import { EncryptionService } from '../../common/encryption.service';
 
 @Injectable()
 export class CommunicationLogsService {
@@ -30,8 +31,19 @@ export class CommunicationLogsService {
     const limit = Math.max(1, Math.min(100, params.limit || 20));
     qb.skip((page - 1) * limit).take(limit).orderBy('log.createdAt', 'DESC');
     const [items, total] = await qb.getManyAndCount();
+    // Déchiffre le champ content
+    const decryptedItems = items.map((log) => {
+      if (log.content && log.contentIv && log.contentTag) {
+        try {
+          log.content = EncryptionService.decrypt(log.content, log.contentIv, log.contentTag);
+        } catch (e) {
+          log.content = '[UNREADABLE]';
+        }
+      }
+      return log;
+    });
     return {
-      items,
+      items: decryptedItems,
       total,
       page,
       limit,
@@ -40,7 +52,15 @@ export class CommunicationLogsService {
   }
 
   async findById(id: string) {
-    return this.logRepo.findOne({ where: { id } });
+    const log = await this.logRepo.findOne({ where: { id } });
+    if (log && log.content && log.contentIv && log.contentTag) {
+      try {
+        log.content = EncryptionService.decrypt(log.content, log.contentIv, log.contentTag);
+      } catch (e) {
+        log.content = '[UNREADABLE]';
+      }
+    }
+    return log;
   }
 
   async export(params: { format: string; type?: string; status?: string; userId?: string; startDate?: string; endDate?: string }) {
@@ -51,13 +71,24 @@ export class CommunicationLogsService {
     if (params.startDate) qb.andWhere('log.createdAt >= :startDate', { startDate: params.startDate });
     if (params.endDate) qb.andWhere('log.createdAt <= :endDate', { endDate: params.endDate });
     const logs = await qb.orderBy('log.createdAt', 'DESC').getMany();
+    // Déchiffre le champ content
+    const decryptedLogs = logs.map((log) => {
+      if (log.content && log.contentIv && log.contentTag) {
+        try {
+          log.content = EncryptionService.decrypt(log.content, log.contentIv, log.contentTag);
+        } catch (e) {
+          log.content = '[UNREADABLE]';
+        }
+      }
+      return log;
+    });
     if (params.format === 'csv') {
       const fields = ['id', 'type', 'provider', 'recipientId', 'recipientContact', 'subject', 'content', 'status', 'providerMessageId', 'errorMessage', 'retryCount', 'sentAt', 'deliveredAt', 'failedAt', 'cost', 'createdAt'];
       const parser = new Json2csvParser({ fields });
-      const csv = parser.parse(Array.isArray(logs) ? logs : [logs]);
+      const csv = parser.parse(Array.isArray(decryptedLogs) ? decryptedLogs : [decryptedLogs]);
       return { csv };
     }
     // JSON export (toujours tableau)
-    return Array.isArray(logs) ? logs : [logs];
+    return Array.isArray(decryptedLogs) ? decryptedLogs : [decryptedLogs];
   }
 }

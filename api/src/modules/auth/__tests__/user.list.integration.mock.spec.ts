@@ -5,12 +5,37 @@ import { AuthController } from '../auth.controller';
 import { UsersService } from '../users.service';
 import { JwtAuthGuard } from '../jwt-auth.guard';
 import { AuthService } from '../auth.service';
+import { PinCodeService } from '../pin-code.service';
+import { BiometricKeyService } from '../biometric-key.service';
+import { RefreshTokenService } from '../refresh-token.service';
+import { JwtService } from '@nestjs/jwt';
+import { SmsService } from '../sms.service';
 
 // Mock UsersService (in-memory)
 class MockUsersService {
   private _users = [
-    { id: 'admin', phoneNumber: '+225000000000', role: 'admin', name: 'Admin', isActive: true },
-    { id: 'collector', phoneNumber: '+225000000001', role: 'collector', name: 'Collector', isActive: true },
+    {
+      id: 'admin',
+      phoneNumber: '+225000000000',
+      role: 'admin',
+      name: 'Admin',
+      isActive: true,
+      plainName: 'Admin',
+      plainPhone: '+225000000000',
+      decryptName: function () { return this.plainName; },
+      decryptPhone: function () { return this.plainPhone; }
+    },
+    {
+      id: 'collector',
+      phoneNumber: '+225000000001',
+      role: 'collector',
+      name: 'Collector',
+      isActive: true,
+      plainName: 'Collector',
+      plainPhone: '+225000000001',
+      decryptName: function () { return this.plainName; },
+      decryptPhone: function () { return this.plainPhone; }
+    },
   ];
   get allUsers() {
     return this._users;
@@ -33,6 +58,18 @@ class MockJwtAuthGuard {
 // Mock AuthService (non utilisé ici)
 class MockAuthService {}
 
+// Mock PinCodeService
+class MockPinCodeService {}
+
+// Mock BiometricKeyService
+class MockBiometricKeyService {}
+
+// Mock RefreshTokenService
+class MockRefreshTokenService {}
+
+// Mock SmsService
+class MockSmsService {}
+
 describe('GET /auth/users (integration, mock)', () => {
   let app: INestApplication;
 
@@ -42,6 +79,11 @@ describe('GET /auth/users (integration, mock)', () => {
       providers: [
         { provide: UsersService, useClass: MockUsersService },
         { provide: AuthService, useClass: MockAuthService },
+        { provide: PinCodeService, useClass: MockPinCodeService },
+        { provide: BiometricKeyService, useClass: MockBiometricKeyService },
+        { provide: RefreshTokenService, useClass: MockRefreshTokenService },
+        { provide: JwtService, useValue: { sign: () => 'token', verify: () => ({}) } },
+        { provide: SmsService, useClass: MockSmsService },
       ],
     })
       .overrideGuard(JwtAuthGuard)

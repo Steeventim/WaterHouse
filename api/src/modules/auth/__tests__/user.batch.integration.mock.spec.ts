@@ -5,6 +5,11 @@ import { AuthController } from '../auth.controller';
 import { UsersService } from '../users.service';
 import { JwtAuthGuard } from '../jwt-auth.guard';
 import { AuthService } from '../auth.service';
+import { PinCodeService } from '../pin-code.service';
+import { BiometricKeyService } from '../biometric-key.service';
+import { RefreshTokenService } from '../refresh-token.service';
+import { JwtService } from '@nestjs/jwt';
+import { SmsService } from '../sms.service';
 
 // Mock UsersService (in-memory)
 class MockUsersService {
@@ -42,6 +47,18 @@ class MockJwtAuthGuard {
   }
 }
 
+// Mock PinCodeService
+class MockPinCodeService {}
+
+// Mock BiometricKeyService
+class MockBiometricKeyService {}
+
+// Mock RefreshTokenService
+class MockRefreshTokenService {}
+
+// Mock SmsService
+class MockSmsService {}
+
 // Mock AuthService (non utilisé ici)
 class MockAuthService {}
 
@@ -55,6 +72,11 @@ describe('PATCH /auth/users/batch-activate & batch-deactivate (integration, mock
       providers: [
         { provide: UsersService, useClass: MockUsersService },
         { provide: AuthService, useClass: MockAuthService },
+        { provide: PinCodeService, useClass: MockPinCodeService },
+        { provide: BiometricKeyService, useClass: MockBiometricKeyService },
+        { provide: RefreshTokenService, useClass: MockRefreshTokenService },
+        { provide: JwtService, useValue: { sign: () => 'token', verify: () => ({}) } },
+        { provide: SmsService, useClass: MockSmsService },
       ],
     })
       .overrideGuard(JwtAuthGuard)

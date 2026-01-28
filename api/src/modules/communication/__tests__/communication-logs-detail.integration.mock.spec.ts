@@ -4,6 +4,7 @@ import request from 'supertest';
 import { CommunicationLogsModule } from '../communication-logs.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommunicationLog } from '../communication-log.entity';
+import { EncryptionService } from '../../../common/encryption.service';
 import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 
 class MockJwtAuthGuard {
@@ -41,12 +42,16 @@ describe('GET /admin/communication-logs/:id (integration, mock)', () => {
 
     // Seed un log
     const repo = app.get('CommunicationLogRepository') || app.get('CommunicationLog');
+    // Chiffre le contenu
+    const encrypted = EncryptionService.encrypt('Test SMS');
     const log = repo.create({
       type: 'sms',
       provider: 'mock',
       recipientId: 'user-1',
       recipientContact: '+225000000000',
-      content: 'Test SMS',
+      content: encrypted.cipherText,
+      contentIv: encrypted.iv,
+      contentTag: encrypted.tag,
       status: 'sent',
     });
     const saved = await repo.save(log);

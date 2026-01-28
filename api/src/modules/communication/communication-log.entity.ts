@@ -23,8 +23,15 @@ export class CommunicationLog {
   @Column({ type: 'varchar', length: 255, nullable: true })
   subject: string;
 
+  // Chiffrement AES-256-GCM
   @Column({ type: 'text', nullable: true })
-  content: string;
+  content: string; // encrypted
+
+  @Column({ type: 'varchar', length: 32, nullable: true })
+  contentIv: string;
+
+  @Column({ type: 'varchar', length: 32, nullable: true })
+  contentTag: string;
 
   @Column({ type: 'varchar', length: 20, default: 'pending' })
   @Index()

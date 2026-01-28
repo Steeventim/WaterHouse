@@ -4,6 +4,7 @@ import request from 'supertest';
 import { CommunicationLogsModule } from '../communication-logs.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommunicationLog } from '../communication-log.entity';
+import { EncryptionService } from '../../../common/encryption.service';
 import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 
 class MockJwtAuthGuard {
@@ -20,7 +21,6 @@ describe('GET /admin/communication-logs (integration, mock)', () => {
   let app: INestApplication;
 
   beforeAll(async () => {
-
     const moduleRef: TestingModule = await Test.createTestingModule({
       imports: [
         TypeOrmModule.forRoot({
@@ -38,6 +38,20 @@ describe('GET /admin/communication-logs (integration, mock)', () => {
 
     app = moduleRef.createNestApplication();
     await app.init();
+
+    // Seed un log chiffré
+    const repo = app.get('CommunicationLogRepository') || app.get('CommunicationLog');
+    const encrypted = EncryptionService.encrypt('Contenu chiffré');
+    await repo.save(repo.create({
+      type: 'sms',
+      provider: 'mock',
+      recipientId: 'user-1',
+      recipientContact: '+225000000000',
+      content: encrypted.cipherText,
+      contentIv: encrypted.iv,
+      contentTag: encrypted.tag,
+      status: 'sent',
+    }));
   });
 
   afterAll(async () => {
