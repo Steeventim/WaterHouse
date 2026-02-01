@@ -60,7 +60,7 @@ development_status:
   # Epic 3: Saisie des Relevés Hors-Ligne
   epic-3: in-progress
   3-1-liste-des-compteurs-triee: review
-  3-2-capture-photo-obligatoire: backlog
+  3-2-capture-photo-obligatoire: review
   3-3-validation-en-temps-reel: backlog
   3-4-stockage-local-hors-ligne: backlog
   3-5-indicateur-de-statut-de-synchronisation: backlog
