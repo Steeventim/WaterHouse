@@ -50,7 +50,7 @@ development_status:
 
   # Epic 2: Gestion des Données de Base
   epic-2: in-progress
-  2-1-synchronisation-des-donnees-de-base: ready-for-dev
+  2-1-synchronisation-des-donnees-de-base: review
   2-2-stockage-local-des-donnees: backlog
   2-3-interface-d-administration-web: backlog
   2-4-gestion-des-compteurs: backlog
