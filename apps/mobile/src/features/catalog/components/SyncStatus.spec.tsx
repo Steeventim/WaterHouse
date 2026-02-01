@@ -179,7 +179,7 @@ describe('SyncStatus Component', () => {
       );
 
       // In compact mode, detailed info should not be shown
-      const lastSyncText = queryByText(/Dernière sync:/);
+      expect(queryByText(/Dernière sync:/)).toBeNull();
       // This test may vary based on implementation
     });
   });
