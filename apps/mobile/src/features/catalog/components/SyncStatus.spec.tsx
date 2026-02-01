@@ -5,7 +5,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
 import { SyncStatus } from '../components/SyncStatus';
-import { SyncProgress } from '../../common/types/sync.types';
+import { SyncProgress } from '../../../common/types/sync.types';
 
 describe('SyncStatus Component', () => {
   const mockSyncProgress: SyncProgress = {

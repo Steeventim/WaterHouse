@@ -4,7 +4,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { SyncManager } from '../services/SyncManager';
-import { SyncProgress, SyncResult } from '../../common/types/sync.types';
+import { SyncProgress, SyncResult } from '../../../common/types/sync.types';
 
 export const useSync = (syncManager: SyncManager | null) => {
   const [syncProgress, setSyncProgress] = useState<SyncProgress | null>(null);

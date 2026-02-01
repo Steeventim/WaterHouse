@@ -4,7 +4,7 @@
  */
 
 import axios, { AxiosInstance } from 'axios';
-import { CatalogSyncData, UserAssignments } from '../../common/types/sync.types';
+import { CatalogSyncData, UserAssignments } from '../../../common/types/sync.types';
 
 export interface ApiClientConfig {
   baseURL: string;

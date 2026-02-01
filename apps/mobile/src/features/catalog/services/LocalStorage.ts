@@ -10,7 +10,7 @@ import {
   Meter,
   UserAssignments,
   CatalogSyncData,
-} from '../../common/types/sync.types';
+} from '../../../common/types/sync.types';
 
 // Enable debug logging during development
 SQLite.DEBUG(true);

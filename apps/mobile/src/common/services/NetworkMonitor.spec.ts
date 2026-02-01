@@ -2,7 +2,7 @@
  * Unit tests for NetworkMonitor service
  */
 
-import { NetworkMonitor } from '../../common/services/NetworkMonitor';
+import { NetworkMonitor } from './NetworkMonitor';
 
 // Mock NetInfo
 jest.mock('@react-native-community/netinfo', () => ({

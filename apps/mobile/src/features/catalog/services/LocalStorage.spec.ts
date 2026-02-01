@@ -3,7 +3,7 @@
  */
 
 import { LocalStorage } from '../services/LocalStorage';
-import { Building, Apartment, Meter } from '../../common/types/sync.types';
+import { Building, Apartment, Meter } from '../../../common/types/sync.types';
 
 // Mock SQLite
 jest.mock('react-native-sqlite-storage', () => ({

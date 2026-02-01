@@ -5,11 +5,11 @@
 
 import { ApiClient } from './ApiClient';
 import { LocalStorage } from './LocalStorage';
-import { NetworkMonitor } from '../../common/services/NetworkMonitor';
+import { NetworkMonitor } from '../../../common/services/NetworkMonitor';
 import {
   SyncResult,
   SyncProgress,
-} from '../../common/types/sync.types';
+} from '../../../common/types/sync.types';
 
 export class SyncManager {
   private readonly SYNC_INTERVAL = 15 * 60 * 1000; // 15 minutes

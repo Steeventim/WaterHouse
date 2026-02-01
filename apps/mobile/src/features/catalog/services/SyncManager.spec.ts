@@ -5,8 +5,8 @@
 import { SyncManager } from '../services/SyncManager';
 import { ApiClient } from '../services/ApiClient';
 import { LocalStorage } from './LocalStorage';
-import { NetworkMonitor } from '../../common/services/NetworkMonitor';
-import { CatalogSyncData } from '../../common/types/sync.types';
+import { NetworkMonitor } from '../../../common/services/NetworkMonitor';
+import { CatalogSyncData } from '../../../common/types/sync.types';
 
 // Mock dependencies
 jest.mock('../services/ApiClient');

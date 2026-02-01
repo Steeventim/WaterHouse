@@ -12,7 +12,7 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import { SyncProgress } from '../../common/types/sync.types';
+import { SyncProgress } from '../../../common/types/sync.types';
 
 export interface SyncStatusProps {
   syncProgress?: SyncProgress;

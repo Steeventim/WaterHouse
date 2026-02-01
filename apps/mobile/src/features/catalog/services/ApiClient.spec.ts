@@ -4,7 +4,7 @@
 
 import { ApiClient } from '../services/ApiClient';
 import axios from 'axios';
-import { CatalogSyncData } from '../../common/types/sync.types';
+import { CatalogSyncData } from '../../../common/types/sync.types';
 
 // Mock axios
 jest.mock('axios');

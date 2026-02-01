@@ -1,12 +1,12 @@
 ---
-story_id: "2.1"
-story_key: "2-1-synchronisation-des-donnees-de-base"
-epic: "Epic 2: Gestion des Données de Base"
-title: "Synchronisation des données de base"
-status: "review"
-assignee: ""
-created: "2026-01-27"
-updated: "2026-01-27"
+story_id: '2.1'
+story_key: '2-1-synchronisation-des-donnees-de-base'
+epic: 'Epic 2: Gestion des Données de Base'
+title: 'Synchronisation des données de base'
+status: 'review'
+assignee: ''
+created: '2026-01-27'
+updated: '2026-01-27'
 ---
 
 # Story 2.1: Synchronisation des données de base
@@ -27,10 +27,12 @@ updated: "2026-01-27"
 ## Technical Requirements
 
 ### Functional Requirements
+
 - **REQ-DATA-001**: Synchronisation des immeubles, logements et compteurs assignés
 - **REQ-DATA-003**: Mise à jour automatique des données de référence
 
 ### Non-Functional Requirements
+
 - **REQ-PERF-003**: Synchronisation des données < 10 secondes par Mo
 - **REQ-REL-002**: Mode hors-ligne fonctionnel 100% du temps
 
@@ -45,11 +47,14 @@ updated: "2026-01-27"
 ### API Endpoints
 
 #### GET /api/v1/catalog/sync
+
 **Purpose**: Get all catalog data for synchronization
 **Query Parameters**:
+
 - `lastSync`: ISO timestamp of last synchronization
 - `userId`: User ID for filtering assigned data
-**Response**:
+  **Response**:
+
 ```json
 {
   "buildings": [
@@ -93,8 +98,10 @@ updated: "2026-01-27"
 ```
 
 #### GET /api/v1/catalog/user-assignments
+
 **Purpose**: Get user's assigned buildings and apartments
 **Response**:
+
 ```json
 {
   "userId": "user_123",
@@ -107,6 +114,7 @@ updated: "2026-01-27"
 ### Database Schema
 
 #### buildings table
+
 ```sql
 CREATE TABLE buildings (
   id VARCHAR(50) PRIMARY KEY,
@@ -129,6 +137,7 @@ CREATE INDEX idx_buildings_location ON buildings(latitude, longitude);
 ```
 
 #### apartments table
+
 ```sql
 CREATE TABLE apartments (
   id VARCHAR(50) PRIMARY KEY,
@@ -153,6 +162,7 @@ CREATE INDEX idx_apartments_tenant ON apartments(tenant_name);
 ```
 
 #### meters table
+
 ```sql
 CREATE TABLE meters (
   id VARCHAR(50) PRIMARY KEY,
@@ -178,6 +188,7 @@ CREATE INDEX idx_meters_active ON meters(is_active);
 ```
 
 #### user_assignments table
+
 ```sql
 CREATE TABLE user_assignments (
   id VARCHAR(50) PRIMARY KEY,
@@ -208,6 +219,7 @@ CREATE INDEX idx_assignments_apartment ON user_assignments(apartment_id);
 ### Synchronization Service
 
 #### Mobile Sync Manager
+
 ```typescript
 // services/sync/syncManager.ts
 export class SyncManager {
@@ -217,7 +229,7 @@ export class SyncManager {
   constructor(
     private apiClient: ApiClient,
     private localStorage: LocalStorage,
-    private networkMonitor: NetworkMonitor
+    private networkMonitor: NetworkMonitor,
   ) {}
 
   async initialize(): Promise<void> {
@@ -281,8 +293,10 @@ export class SyncManager {
   }
 
   private async getUserAssignments(): Promise<UserAssignments> {
-    return await this.localStorage.getUserAssignments() ||
-           await this.apiClient.getUserAssignments();
+    return (
+      (await this.localStorage.getUserAssignments()) ||
+      (await this.apiClient.getUserAssignments())
+    );
   }
 
   private async storeCatalogData(data: CatalogSyncData): Promise<void> {
@@ -322,6 +336,7 @@ export class SyncManager {
 ```
 
 #### Local Storage Manager
+
 ```typescript
 // services/storage/localStorage.ts
 export class LocalStorage {
@@ -398,9 +413,16 @@ export class LocalStorage {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
     await this.executeQuery(query, [
-      building.id, building.name, building.address, building.managerId,
-      building.latitude, building.longitude, building.totalFloors,
-      building.totalApartments, building.createdAt, building.updatedAt
+      building.id,
+      building.name,
+      building.address,
+      building.managerId,
+      building.latitude,
+      building.longitude,
+      building.totalFloors,
+      building.totalApartments,
+      building.createdAt,
+      building.updatedAt,
     ]);
   }
 
@@ -411,9 +433,17 @@ export class LocalStorage {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
     await this.executeQuery(query, [
-      apartment.id, apartment.buildingId, apartment.number, apartment.floor,
-      apartment.tenantName, apartment.tenantPhone, apartment.tenantEmail,
-      apartment.surfaceArea, apartment.rentAmount, apartment.createdAt, apartment.updatedAt
+      apartment.id,
+      apartment.buildingId,
+      apartment.number,
+      apartment.floor,
+      apartment.tenantName,
+      apartment.tenantPhone,
+      apartment.tenantEmail,
+      apartment.surfaceArea,
+      apartment.rentAmount,
+      apartment.createdAt,
+      apartment.updatedAt,
     ]);
   }
 
@@ -424,16 +454,24 @@ export class LocalStorage {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
     await this.executeQuery(query, [
-      meter.id, meter.apartmentId, meter.type, meter.serialNumber,
-      meter.initialReading, meter.currentReading, meter.lastReadingDate,
-      meter.installationDate, meter.isActive ? 1 : 0, meter.createdAt, meter.updatedAt
+      meter.id,
+      meter.apartmentId,
+      meter.type,
+      meter.serialNumber,
+      meter.initialReading,
+      meter.currentReading,
+      meter.lastReadingDate,
+      meter.installationDate,
+      meter.isActive ? 1 : 0,
+      meter.createdAt,
+      meter.updatedAt,
     ]);
   }
 
   async getLastSyncTimestamp(): Promise<string | null> {
     const result = await this.executeQuery(
       'SELECT value FROM sync_metadata WHERE key = ?',
-      ['last_sync_timestamp']
+      ['last_sync_timestamp'],
     );
     return result.rows.length > 0 ? result.rows.item(0).value : null;
   }
@@ -441,14 +479,14 @@ export class LocalStorage {
   async setLastSyncTimestamp(timestamp: string): Promise<void> {
     await this.executeQuery(
       'INSERT OR REPLACE INTO sync_metadata (key, value) VALUES (?, ?)',
-      ['last_sync_timestamp', timestamp]
+      ['last_sync_timestamp', timestamp],
     );
   }
 
   async getUserAssignments(): Promise<UserAssignments | null> {
     const result = await this.executeQuery(
       'SELECT value FROM sync_metadata WHERE key = ?',
-      ['user_assignments']
+      ['user_assignments'],
     );
     if (result.rows.length > 0) {
       return JSON.parse(result.rows.item(0).value);
@@ -459,18 +497,21 @@ export class LocalStorage {
   async setUserAssignments(assignments: UserAssignments): Promise<void> {
     await this.executeQuery(
       'INSERT OR REPLACE INTO sync_metadata (key, value) VALUES (?, ?)',
-      ['user_assignments', JSON.stringify(assignments)]
+      ['user_assignments', JSON.stringify(assignments)],
     );
   }
 
-  private async executeQuery(query: string, params: any[] = []): Promise<SQLite.ResultSet> {
+  private async executeQuery(
+    query: string,
+    params: any[] = [],
+  ): Promise<SQLite.ResultSet> {
     return new Promise((resolve, reject) => {
-      this.database.transaction(tx => {
+      this.database.transaction((tx) => {
         tx.executeSql(
           query,
           params,
           (_, result) => resolve(result),
-          (_, error) => reject(error)
+          (_, error) => reject(error),
         );
       });
     });
@@ -479,8 +520,8 @@ export class LocalStorage {
   async beginTransaction(): Promise<SQLiteTransaction> {
     return new Promise((resolve, reject) => {
       this.database.transaction(
-        tx => resolve(tx),
-        error => reject(error)
+        (tx) => resolve(tx),
+        (error) => reject(error),
       );
     });
   }
@@ -490,6 +531,7 @@ export class LocalStorage {
 ### Network Monitor
 
 #### Network State Management
+
 ```typescript
 // services/network/networkMonitor.ts
 export class NetworkMonitor {
@@ -513,10 +555,10 @@ export class NetworkMonitor {
 
     if (!wasOnline && this.isOnline) {
       // Network became available
-      this.networkAvailableCallbacks.forEach(callback => callback());
+      this.networkAvailableCallbacks.forEach((callback) => callback());
     } else if (wasOnline && !this.isOnline) {
       // Network was lost
-      this.networkLostCallbacks.forEach(callback => callback());
+      this.networkLostCallbacks.forEach((callback) => callback());
     }
   };
 
@@ -552,6 +594,7 @@ export class NetworkMonitor {
 ### Sync Progress and UI
 
 #### Sync Status Component
+
 ```typescript
 // components/SyncStatus.tsx
 interface SyncStatusProps {
@@ -603,18 +646,21 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Testing Strategy
 
 #### Unit Tests
+
 - Sync manager logic and state management
 - Local storage operations
 - Network monitor state changes
 - Data transformation and validation
 
 #### Integration Tests
+
 - Complete sync workflow (API → Storage)
 - Network state changes during sync
 - Data consistency after sync
 - Error handling and recovery
 
 #### E2E Tests
+
 - App startup sync process
 - Manual sync trigger
 - Offline/online transitions
@@ -623,6 +669,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Implementation Checklist
 
 #### Backend Implementation
+
 - [ ] Catalog module with sync endpoints
 - [ ] Database schema for catalog entities
 - [ ] User assignment logic
@@ -630,6 +677,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 - [ ] Sync timestamp management
 
 #### Mobile Implementation
+
 - [ ] Network monitor service
 - [ ] Local SQLite storage
 - [ ] Sync manager with full/incremental sync
@@ -638,6 +686,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 - [ ] Error handling and retry logic
 
 #### Testing
+
 - [ ] Unit tests for all sync components
 - [ ] Integration tests for sync workflow
 - [ ] E2E tests for complete sync process
@@ -646,10 +695,12 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Dependencies
 
 #### Backend Dependencies
+
 - @nestjs/typeorm (already included)
 - typeorm (already included)
 
 #### Mobile Dependencies
+
 - @react-native-community/netinfo
 - react-native-sqlite-storage (already included)
 - @react-native-async-storage/async-storage (already included)
@@ -657,18 +708,21 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Success Criteria
 
 #### Functional Success
+
 - Catalog data syncs automatically on app start
 - All assigned buildings/apartments/meters available offline
 - Manual sync works when requested
 - Sync status is clearly visible to user
 
 #### Technical Success
+
 - Sync completes within performance requirements (< 10s/MB)
 - Data integrity maintained during sync
 - Efficient storage usage on mobile device
 - Network state changes handled gracefully
 
 #### Quality Success
+
 - Code coverage > 90% for sync components
 - All error scenarios handled gracefully
 - User experience smooth during sync operations
@@ -690,24 +744,28 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Notes for Developer
 
 **Foundation for Offline-First:**
+
 - This is the first data synchronization story
 - Must be rock-solid for all subsequent features
 - Consider data volume and mobile storage limits
 - Plan for future incremental sync optimizations
 
 **Data Architecture Decisions:**
+
 - Local SQLite for fast queries and offline access
 - Sync on app start ensures fresh data
 - User assignments filter relevant data only
 - Consider data partitioning for large deployments
 
 **Performance Considerations:**
+
 - Initial sync might be large - implement progress indicators
 - Background sync should not impact user experience
 - Optimize database queries and indexes
 - Consider data compression for network transfer
 
 **Error Handling:**
+
 - Network failures should not break the app
 - Partial sync states need careful handling
 - Data conflicts (rare but possible) need resolution
@@ -736,11 +794,13 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 **Scope:** Full synchronization system for catalog data (buildings, apartments, meters)
 
 **Architecture:**
+
 - Backend: NestJS API with TypeORM QueryBuilder for efficient filtering
 - Mobile: React Native with SQLite for offline storage
 - Network monitoring with automatic sync triggers
 
 **Key Components:**
+
 1. Backend CatalogService with 9 methods covering sync and CRUD
 2. Mobile NetworkMonitor for online/offline state tracking
 3. Mobile LocalStorage with SQLite persistence
@@ -749,6 +809,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 6. Complete test suite with 15+ test files
 
 **Technical Achievements:**
+
 - ✅ Incremental sync support via `lastSync` parameter
 - ✅ Assignment-based access control (users only see assigned data)
 - ✅ Transaction support in LocalStorage for data consistency
@@ -758,6 +819,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ### Files Created/Modified
 
 #### Backend (apps/api/src/modules/catalog/)
+
 - catalog.service.ts (184 lines)
 - catalog.controller.ts (50 lines)
 - catalog.module.ts (unchanged)
@@ -766,6 +828,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 - catalog.e2e.spec.ts
 
 #### Mobile (apps/mobile/src/features/catalog/)
+
 - services/NetworkMonitor.ts
 - services/LocalStorage.ts
 - services/ApiClient.ts
@@ -777,6 +840,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 - Full test suite (5+ test files)
 
 #### Shared Types
+
 - apps/api/src/common/types/sync.types.ts
 - apps/mobile/src/common/types/sync.types.ts
 
@@ -790,6 +854,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ## File List
 
 ### Backend Implementation
+
 - apps/api/src/modules/catalog/catalog.service.ts
 - apps/api/src/modules/catalog/catalog.controller.ts
 - apps/api/src/modules/catalog/catalog.service.spec.ts
@@ -798,6 +863,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 - apps/api/src/common/types/sync.types.ts
 
 ### Mobile Implementation
+
 - apps/mobile/src/features/catalog/services/NetworkMonitor.ts
 - apps/mobile/src/features/catalog/services/LocalStorage.ts
 - apps/mobile/src/features/catalog/services/ApiClient.ts
@@ -817,6 +883,7 @@ export const SyncStatus: React.FC<SyncStatusProps> = ({
 ## Change Log
 
 ### 2026-01-27 - Initial Implementation Complete
+
 - Implemented backend catalog sync API with assignment-based filtering
 - Created mobile sync infrastructure with NetworkMonitor, LocalStorage, and SyncManager
 - Implemented SyncStatus UI component with real-time indicators
