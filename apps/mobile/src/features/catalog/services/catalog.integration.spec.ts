@@ -194,8 +194,8 @@ describe('Catalog Sync Integration Tests', () => {
     });
 
     it('should track sync progress through callbacks', async () => {
-      const progressStates: any[] = [];
-      const progressCallback = jest.fn((progress: any) => {
+      const progressStates: SyncProgress[] = [];
+      const progressCallback = jest.fn((progress: SyncProgress) => {
         progressStates.push(progress);
       });
 

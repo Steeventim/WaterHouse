@@ -1,5 +1,55 @@
 {
   "nodes": {
+    "entities": {
+      "name": "entities",
+      "type": "lib",
+      "data": {
+        "root": "libs/entities",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/entities",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "name": "entities",
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
     "mobile": {
       "name": "mobile",
       "type": "app",
@@ -17366,6 +17416,13 @@
     }
   },
   "dependencies": {
+    "entities": [
+      {
+        "source": "entities",
+        "target": "npm:typeorm",
+        "type": "static"
+      }
+    ],
     "mobile": [
       {
         "source": "mobile",
@@ -17400,6 +17457,11 @@
       {
         "source": "mobile",
         "target": "npm:metro-config",
+        "type": "static"
+      },
+      {
+        "source": "mobile",
+        "target": "npm:axios",
         "type": "static"
       },
       {
@@ -17525,7 +17587,7 @@
     "waterhouse": [
       {
         "source": "waterhouse",
-        "target": "npm:tslib",
+        "target": "npm:@nestjs/testing",
         "type": "static"
       },
       {
@@ -17535,17 +17597,22 @@
       },
       {
         "source": "waterhouse",
+        "target": "npm:@nestjs/common",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
         "target": "npm:@nestjs/typeorm",
         "type": "static"
       },
       {
         "source": "waterhouse",
-        "target": "npm:@nestjs/core",
-        "type": "static"
+        "target": "npm:@nestjs/typeorm",
+        "type": "dynamic"
       },
       {
         "source": "waterhouse",
-        "target": "npm:@nestjs/jwt",
+        "target": "npm:entities",
         "type": "static"
       },
       {
@@ -17555,18 +17622,58 @@
       },
       {
         "source": "waterhouse",
-        "target": "npm:@nestjs/passport",
+        "target": "npm:typeorm",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "entities",
         "type": "static"
       },
       {
         "source": "waterhouse",
-        "target": "npm:passport-jwt",
-        "type": "static"
+        "target": "npm:@nestjs/core",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:tslib",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:@nestjs/passport",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:@nestjs/jwt",
+        "type": "dynamic"
       },
       {
         "source": "waterhouse",
         "target": "npm:twilio",
-        "type": "static"
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:class-validator",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:passport-jwt",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:json2csv",
+        "type": "dynamic"
+      },
+      {
+        "source": "waterhouse",
+        "target": "npm:express",
+        "type": "dynamic"
       },
       {
         "source": "waterhouse",
@@ -40813,5 +40920,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1769616358785
+  "computedAt": 1769977553671
 }

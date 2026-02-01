@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '../../app/app.module';
-import { CommunicationLogsArchiverService } from '../communication/communication-logs-archiver.service';
+import { AppModule } from '../../../app/app.module';
+import { CommunicationLogsArchiverService } from '../communication-logs-archiver.service';
 
 async function bootstrap() {
   const app = await NestFactory.createApplicationContext(AppModule);

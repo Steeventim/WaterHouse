@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * NetworkMonitor - Monitors network connectivity state
@@ -76,7 +76,7 @@ export class NetworkMonitor {
         this.isOnline = true;
         this.notifyNetworkAvailable();
       }
-    } catch (error) {
+    } catch {
       if (this.isOnline) {
         this.isOnline = false;
         this.notifyNetworkLost();
@@ -118,7 +118,7 @@ export class NetworkMonitor {
       const response = await fetch('/health', { method: 'HEAD', cache: 'no-cache' });
       this.isOnline = response.ok;
       return this.isOnline;
-    } catch (error) {
+    } catch {
       this.isOnline = false;
       return false;
     }

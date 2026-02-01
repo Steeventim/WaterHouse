@@ -3,7 +3,7 @@
  * Displays synchronization status and provides manual sync capability
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,

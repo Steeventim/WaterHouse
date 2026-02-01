@@ -16,7 +16,7 @@ import SQLite from 'react-native-sqlite-storage';
 
 describe('LocalStorage', () => {
   let storage: LocalStorage;
-  let mockDatabase: any;
+  let mockDatabase: { transaction: jest.Mock };
 
   beforeEach(() => {
     mockDatabase = {
@@ -110,7 +110,7 @@ describe('LocalStorage', () => {
       mockDatabase.executeSql.mockResolvedValue({
         rows: {
           length: 1,
-          item: (i: number) => ({ value: timestamp }),
+          item: () => ({ value: timestamp }),
         },
       });
 

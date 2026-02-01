@@ -81,7 +81,7 @@ export class ApiClient {
   /**
    * Handle API errors
    */
-  private handleError(error: any): Error {
+  private handleError(error: unknown): Error {
     if (axios.isAxiosError(error)) {
       if (error.response) {
         return new Error(

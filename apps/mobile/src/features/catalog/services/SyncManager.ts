@@ -8,7 +8,6 @@ import { LocalStorage } from './LocalStorage';
 import { NetworkMonitor } from '../../common/services/NetworkMonitor';
 import {
   SyncResult,
-  UserAssignments,
   SyncProgress,
 } from '../../common/types/sync.types';
 

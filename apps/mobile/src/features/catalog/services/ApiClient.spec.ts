@@ -12,7 +12,7 @@ const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('ApiClient', () => {
   let apiClient: ApiClient;
-  let mockAxiosInstance: any;
+  let mockAxiosInstance: { get: jest.Mock; post: jest.Mock; defaults: { headers: { common: Record<string, string> } } };
 
   beforeEach(() => {
     mockAxiosInstance = {

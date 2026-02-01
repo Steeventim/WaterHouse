@@ -13,6 +13,10 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "commonjs",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "../",
+    "paths": {
+      "@entities/*": ["libs/entities/src/*"]
+    }
   }
 }

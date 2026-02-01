@@ -29,7 +29,9 @@ describe('NetworkMonitor', () => {
       (NetInfo.fetch as jest.Mock).mockResolvedValue({
         isConnected: true,
       });
-      (NetInfo.addEventListener as jest.Mock).mockReturnValue(() => {});
+      (NetInfo.addEventListener as jest.Mock).mockReturnValue(() => {
+        // Unsubscribe function
+      });
 
       await monitor.initialize();
 
@@ -77,10 +79,12 @@ describe('NetworkMonitor', () => {
         isConnected: false,
       });
 
-      let unsubscribeFn: any = null;
+      let unsubscribeFn: (() => void) | null = null;
       (NetInfo.addEventListener as jest.Mock).mockImplementation(
-        (callback) => {
-          unsubscribeFn = () => {};
+        (_callback: (state: { isConnected: boolean }) => void) => {
+          unsubscribeFn = () => {
+            // Unsubscribe function
+          };
           return unsubscribeFn;
         }
       );
@@ -103,10 +107,12 @@ describe('NetworkMonitor', () => {
         isConnected: true,
       });
 
-      let unsubscribeFn: any = null;
+      let unsubscribeFn: (() => void) | null = null;
       (NetInfo.addEventListener as jest.Mock).mockImplementation(
-        (callback) => {
-          unsubscribeFn = () => {};
+        (_callback: (state: { isConnected: boolean }) => void) => {
+          unsubscribeFn = () => {
+            // Unsubscribe function
+          };
           return unsubscribeFn;
         }
       );

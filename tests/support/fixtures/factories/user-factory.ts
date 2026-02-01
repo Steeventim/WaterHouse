@@ -43,8 +43,10 @@ export class UserFactory {
   }
 
   async cleanup() {
+    const base = process.env.API_URL || 'http://localhost:3001/api';
     for (const userId of this.createdUsers) {
-      await fetch(`${process.env.API_URL}/users/${userId}`, { method: 'DELETE' });
+      if (!userId) continue;
+      await fetch(`${base.replace(/\/$/, '')}/users/${userId}`, { method: 'DELETE' });
     }
     this.createdUsers = [];
   }
