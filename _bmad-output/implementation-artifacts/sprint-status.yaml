@@ -76,8 +76,8 @@ development_status:
 
   # Epic 5: Calcul et Génération des Factures
   epic-5: in-progress
-  5-1-configuration-des-tarifs-de-facturation: ready-for-dev
-  5-2-calcul-automatique-de-la-consommation: backlog
+  5-1-configuration-des-tarifs-de-facturation: review
+  5-2-calcul-automatique-de-la-consommation: ready-for-dev
   5-3-generation-de-factures-pdf: backlog
   5-4-historique-des-factures: backlog
   epic-5-retrospective: optional
