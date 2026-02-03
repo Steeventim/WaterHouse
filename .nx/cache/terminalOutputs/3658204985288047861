@@ -1,0 +1,35 @@
+> eslint .
+
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/app/App.tsx[24m[0m
+[0m  [2m1:1[22m  [31merror[39m  Definition for rule 'jsx-a11y/accessible-emoji' was not found  [2mjsx-a11y/accessible-emoji[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/common/services/NetworkMonitor.spec.ts[24m[0m
+[0m   [2m84:10[22m  [33mwarning[39m  '_callback' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m112:10[22m  [33mwarning[39m  '_callback' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/features/meters/components/ProgressBar.spec.tsx[24m[0m
+[0m  [2m11:13[22m  [33mwarning[39m  'getByTestId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m35:13[22m  [33mwarning[39m  'getByTestId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m44:15[22m  [33mwarning[39m  'rerender' is assigned a value but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[31m[1m✖ 6 problems (1 error, 5 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+> eslint .
+
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/app/App.tsx[24m[0m
+[0m  [2m1:1[22m  [31merror[39m  Definition for rule 'jsx-a11y/accessible-emoji' was not found  [2mjsx-a11y/accessible-emoji[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/common/services/NetworkMonitor.spec.ts[24m[0m
+[0m   [2m84:10[22m  [33mwarning[39m  '_callback' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m112:10[22m  [33mwarning[39m  '_callback' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/apps/mobile/src/features/meters/components/ProgressBar.spec.tsx[24m[0m
+[0m  [2m11:13[22m  [33mwarning[39m  'getByTestId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m35:13[22m  [33mwarning[39m  'getByTestId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m44:15[22m  [33mwarning[39m  'rerender' is assigned a value but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[31m[1m✖ 6 problems (1 error, 5 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+Warning: command "eslint ." exited with non-zero status code

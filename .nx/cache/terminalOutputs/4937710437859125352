@@ -1,0 +1,34 @@
+
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+
+
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage
+> waterhouse@1.0.0 test
+> nx test --testPathPattern=Conflict --no-coverage
+[2m> [22m[2mnx run[22m waterhouse:test --testPathPattern=Conflict --no-coverage

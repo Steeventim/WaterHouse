@@ -1,0 +1,15 @@
+> eslint .
+
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api-e2e/src/api/api.spec.ts[24m[0m
+[0m  [2m7:5[22m  [33mwarning[39m  Unused eslint-disable directive (no problems were reported from 'no-console')[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api-e2e/src/support/global-teardown.ts[24m[0m
+[0m  [2m2:1[22m  [33mwarning[39m  Unused eslint-disable directive (no problems were reported)[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api-e2e/src/support/test-setup.ts[24m[0m
+[0m  [2m1:1[22m  [33mwarning[39m  Unused eslint-disable directive (no problems were reported)[0m
+[0m[0m
+[0m[33m[1m✖ 3 problems (0 errors, 3 warnings)[22m[39m[0m
+[0m[33m[1m[22m[39m[33m[1m  0 errors and 3 warnings potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[33m[1m[22m[39m[0m

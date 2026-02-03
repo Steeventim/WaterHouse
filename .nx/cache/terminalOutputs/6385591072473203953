@@ -1,0 +1,241 @@
+> eslint .
+
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/data-source.ts[24m[0m
+[0m  [2m5:16[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/scripts/seed-admin.ts[24m[0m
+[0m  [2m12:95[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m13:20[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/app/app.controller.ts[24m[0m
+[0m  [2m16:30[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/app/dev.controller.ts[24m[0m
+[0m  [2m13:59[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m16:51[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m16:85[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.controller.spec.ts[24m[0m
+[0m  [2m3:10[22m  [33mwarning[39m  'AuthService' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m4:10[22m  [33mwarning[39m  'UsersService' is defined but never used         [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m5:10[22m  [33mwarning[39m  'PinCodeService' is defined but never used       [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:10[22m  [33mwarning[39m  'BiometricKeyService' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m7:10[22m  [33mwarning[39m  'RefreshTokenService' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.pin.integration.spec.ts[24m[0m
+[0m  [2m69:52[22m  [33mwarning[39m  'userId' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.profile.integration.spec.ts[24m[0m
+[0m  [2m11:7[22m  [33mwarning[39m  'accessToken' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.service.spec.ts[24m[0m
+[0m   [2m1:10[22m  [33mwarning[39m  'Test' is defined but never used           [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m1:16[22m  [33mwarning[39m  'TestingModule' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m4:10[22m  [33mwarning[39m  'JwtService' is defined but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m20:35[22m  [33mwarning[39m  Unexpected any. Specify a different type   [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/pin-code.service.spec.ts[24m[0m
+[0m  [2m43:11[22m  [33mwarning[39m  'wrongHash' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.batch.integration.mock.spec.ts[24m[0m
+[0m  [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.encryption.crud.spec.ts[24m[0m
+[0m  [2m65:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m66:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m74:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m75:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.list.integration.mock.spec.ts[24m[0m
+[0m  [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.list.unit.spec.ts[24m[0m
+[0m  [2m2:10[22m  [33mwarning[39m  'User' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.reset-otp.integration.mock.spec.ts[24m[0m
+[0m   [2m2:28[22m  [33mwarning[39m  'BadRequestException' is defined but never used   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m16:9[22m   [33mwarning[39m  Unexpected any. Specify a different type          [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m55:7[22m   [33mwarning[39m  'authService' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.update.integration.mock.spec.ts[24m[0m
+[0m   [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m8:10[22m  [33mwarning[39m  'UpdateUserDto' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m19:45[22m  [33mwarning[39m  Unexpected any. Specify a different type           [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m45:7[22m   [33mwarning[39m  'usersService' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.update.unit.spec.ts[24m[0m
+[0m  [2m2:10[22m  [33mwarning[39m  'User' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/auth.service.ts[24m[0m
+[0m   [2m15:11[22m  [33mwarning[39m  'User' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m82:81[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m124:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m124:64[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/jwt.strategy.ts[24m[0m
+[0m  [2m15:27[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/users.service.spec.ts[24m[0m
+[0m  [2m13:10[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/users.service.ts[24m[0m
+[0m  [2m39:22[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-history.integration.mock.spec.ts[24m[0m
+[0m  [2m23:7[22m  [33mwarning[39m  'logId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-logs-export.integration.mock.spec.ts[24m[0m
+[0m  [2m22:7[22m  [33mwarning[39m  'logId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-metrics.integration.mock.spec.ts[24m[0m
+[0m  [2m21:7[22m  [33mwarning[39m  'metricId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-history.controller.ts[24m[0m
+[0m  [2m12:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-log.entity.ts[24m[0m
+[0m  [2m62:13[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-logs.controller.ts[24m[0m
+[0m  [2m24:22[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m40:21[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m42:22[22m  [31merror[39m    Type string trivially inferred from a string literal, remove type annotation  [2m@typescript-eslint/no-inferrable-types[22m[0m
+[0m  [2m63:36[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m70:21[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-logs.service.ts[24m[0m
+[0m  [2m39:18[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m59:16[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m79:18[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-metrics.controller.ts[24m[0m
+[0m  [2m12:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/scripts/archive-old-logs.ts[24m[0m
+[0m  [2m9:3[22m  [33mwarning[39m  Unused eslint-disable directive (no problems were reported from 'no-console')[0m
+[0m[0m
+[0m[31m[1m✖ 56 problems (5 errors, 51 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  1 error and 1 warning potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+> eslint .
+
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/data-source.ts[24m[0m
+[0m  [2m5:16[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/scripts/seed-admin.ts[24m[0m
+[0m  [2m12:95[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m13:20[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/app/app.controller.ts[24m[0m
+[0m  [2m16:30[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/app/dev.controller.ts[24m[0m
+[0m  [2m13:59[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m16:51[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m16:85[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.controller.spec.ts[24m[0m
+[0m  [2m3:10[22m  [33mwarning[39m  'AuthService' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m4:10[22m  [33mwarning[39m  'UsersService' is defined but never used         [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m5:10[22m  [33mwarning[39m  'PinCodeService' is defined but never used       [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:10[22m  [33mwarning[39m  'BiometricKeyService' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m7:10[22m  [33mwarning[39m  'RefreshTokenService' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.pin.integration.spec.ts[24m[0m
+[0m  [2m69:52[22m  [33mwarning[39m  'userId' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.profile.integration.spec.ts[24m[0m
+[0m  [2m11:7[22m  [33mwarning[39m  'accessToken' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/auth.service.spec.ts[24m[0m
+[0m   [2m1:10[22m  [33mwarning[39m  'Test' is defined but never used           [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m1:16[22m  [33mwarning[39m  'TestingModule' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m4:10[22m  [33mwarning[39m  'JwtService' is defined but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m20:35[22m  [33mwarning[39m  Unexpected any. Specify a different type   [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/pin-code.service.spec.ts[24m[0m
+[0m  [2m43:11[22m  [33mwarning[39m  'wrongHash' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.batch.integration.mock.spec.ts[24m[0m
+[0m  [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.encryption.crud.spec.ts[24m[0m
+[0m  [2m65:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m66:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m74:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m  [2m75:5[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression  [2m@typescript-eslint/no-unused-expressions[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.list.integration.mock.spec.ts[24m[0m
+[0m  [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.list.unit.spec.ts[24m[0m
+[0m  [2m2:10[22m  [33mwarning[39m  'User' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.reset-otp.integration.mock.spec.ts[24m[0m
+[0m   [2m2:28[22m  [33mwarning[39m  'BadRequestException' is defined but never used   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m16:9[22m   [33mwarning[39m  Unexpected any. Specify a different type          [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m55:7[22m   [33mwarning[39m  'authService' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.update.integration.mock.spec.ts[24m[0m
+[0m   [2m2:28[22m  [33mwarning[39m  'ForbiddenException' is defined but never used     [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m8:10[22m  [33mwarning[39m  'UpdateUserDto' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m19:45[22m  [33mwarning[39m  Unexpected any. Specify a different type           [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m45:7[22m   [33mwarning[39m  'usersService' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/__tests__/user.update.unit.spec.ts[24m[0m
+[0m  [2m2:10[22m  [33mwarning[39m  'User' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/auth.service.ts[24m[0m
+[0m   [2m15:11[22m  [33mwarning[39m  'User' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m82:81[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m124:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m124:64[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/jwt.strategy.ts[24m[0m
+[0m  [2m15:27[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/users.service.spec.ts[24m[0m
+[0m  [2m13:10[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/auth/users.service.ts[24m[0m
+[0m  [2m39:22[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-history.integration.mock.spec.ts[24m[0m
+[0m  [2m23:7[22m  [33mwarning[39m  'logId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-logs-export.integration.mock.spec.ts[24m[0m
+[0m  [2m22:7[22m  [33mwarning[39m  'logId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/__tests__/communication-metrics.integration.mock.spec.ts[24m[0m
+[0m  [2m21:7[22m  [33mwarning[39m  'metricId' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-history.controller.ts[24m[0m
+[0m  [2m12:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-log.entity.ts[24m[0m
+[0m  [2m62:13[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-logs.controller.ts[24m[0m
+[0m  [2m24:22[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m40:21[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m42:22[22m  [31merror[39m    Type string trivially inferred from a string literal, remove type annotation  [2m@typescript-eslint/no-inferrable-types[22m[0m
+[0m  [2m63:36[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m  [2m70:21[22m  [33mwarning[39m  Unexpected any. Specify a different type                                      [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-logs.service.ts[24m[0m
+[0m  [2m39:18[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m59:16[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m79:18[22m  [33mwarning[39m  'e' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/communication-metrics.controller.ts[24m[0m
+[0m  [2m12:21[22m  [33mwarning[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4m/home/tims/Dev1.0/WaterHouse/api/src/modules/communication/scripts/archive-old-logs.ts[24m[0m
+[0m  [2m9:3[22m  [33mwarning[39m  Unused eslint-disable directive (no problems were reported from 'no-console')[0m
+[0m[0m
+[0m[31m[1m✖ 56 problems (5 errors, 51 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  1 error and 1 warning potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+Warning: command "eslint ." exited with non-zero status code

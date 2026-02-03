@@ -2807,15 +2807,6 @@
         "hash": "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg=="
       }
     },
-    "npm:ansi-styles": {
-      "type": "npm",
-      "name": "npm:ansi-styles",
-      "data": {
-        "version": "4.3.0",
-        "packageName": "ansi-styles",
-        "hash": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg=="
-      }
-    },
     "npm:ansi-styles@5.2.0": {
       "type": "npm",
       "name": "npm:ansi-styles@5.2.0",
@@ -2823,6 +2814,15 @@
         "version": "5.2.0",
         "packageName": "ansi-styles",
         "hash": "sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA=="
+      }
+    },
+    "npm:ansi-styles": {
+      "type": "npm",
+      "name": "npm:ansi-styles",
+      "data": {
+        "version": "4.3.0",
+        "packageName": "ansi-styles",
+        "hash": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg=="
       }
     },
     "npm:ansi-styles@3.2.1": {
@@ -5003,6 +5003,15 @@
         "hash": "sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww=="
       }
     },
+    "npm:@react-native-async-storage/async-storage": {
+      "type": "npm",
+      "name": "npm:@react-native-async-storage/async-storage",
+      "data": {
+        "version": "1.24.0",
+        "packageName": "@react-native-async-storage/async-storage",
+        "hash": "sha512-W4/vbwUOYOjco0x3toB8QCr7EjIP6nE9G7o8PMguvvjYT5Awg09lyV4enACRx4s++PPulBiBSjL0KTFx2u0Z/g=="
+      }
+    },
     "npm:@react-native-community/cli": {
       "type": "npm",
       "name": "npm:@react-native-community/cli",
@@ -5262,6 +5271,15 @@
         "version": "18.3.1",
         "packageName": "react-is",
         "hash": "sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg=="
+      }
+    },
+    "npm:react-is@19.2.4": {
+      "type": "npm",
+      "name": "npm:react-is@19.2.4",
+      "data": {
+        "version": "19.2.4",
+        "packageName": "react-is",
+        "hash": "sha512-W+EWGn2v0ApPKgKKCy/7s7WHXkboGcsrXE+2joLyVxkbyVQfO3MUEaUQDHoSmb8TFFrSKYa9mw64WZHNHSDzYA=="
       }
     },
     "npm:ws@6.2.3": {
@@ -5550,6 +5568,15 @@
         "version": "2.0.1",
         "packageName": "universalify",
         "hash": "sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw=="
+      }
+    },
+    "npm:@react-native-community/netinfo": {
+      "type": "npm",
+      "name": "npm:@react-native-community/netinfo",
+      "data": {
+        "version": "11.5.1",
+        "packageName": "@react-native-community/netinfo",
+        "hash": "sha512-ZiLvVoNW6fIOZqU99Jdm+dfwv2T76AHifKtEDydPQOkzKg/xLIkSrOEMUigkmlNQu4MeCgFJlrapscbRzU+bKg=="
       }
     },
     "npm:@react-native/assets-registry": {
@@ -6612,6 +6639,42 @@
         "version": "0.1.25",
         "packageName": "@swc/types",
         "hash": "sha512-iAoY/qRhNH8a/hBvm3zKj9qQ4oc2+3w1unPJa2XvTK3XjeLXtzcCingVPw/9e5mn1+0yPqxcBGp9Jf0pkfMb1g=="
+      }
+    },
+    "npm:@testing-library/jest-native": {
+      "type": "npm",
+      "name": "npm:@testing-library/jest-native",
+      "data": {
+        "version": "5.4.3",
+        "packageName": "@testing-library/jest-native",
+        "hash": "sha512-/sSDGaOuE+PJ1Z9Kp4u7PQScSVVXGud59I/qsBFFJvIbcn4P6yYw6cBnBmbPF+X9aRIsTJRDl6gzw5ZkJNm66w=="
+      }
+    },
+    "npm:jest-diff@29.7.0": {
+      "type": "npm",
+      "name": "npm:jest-diff@29.7.0",
+      "data": {
+        "version": "29.7.0",
+        "packageName": "jest-diff",
+        "hash": "sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw=="
+      }
+    },
+    "npm:jest-diff": {
+      "type": "npm",
+      "name": "npm:jest-diff",
+      "data": {
+        "version": "30.2.0",
+        "packageName": "jest-diff",
+        "hash": "sha512-dQHFo3Pt4/NLlG5z4PxZ/3yZTZ1C7s9hveiOj+GCN+uT109NC2QgsoVZsVOAvbJ3RgKkvyLGXZV9+piDpWbm6A=="
+      }
+    },
+    "npm:@testing-library/react-native": {
+      "type": "npm",
+      "name": "npm:@testing-library/react-native",
+      "data": {
+        "version": "13.3.3",
+        "packageName": "@testing-library/react-native",
+        "hash": "sha512-k6Mjsd9dbZgvY4Bl7P1NIpePQNi+dfYtlJ5voi9KQlynxSyQkfOgJmYGCYmw/aSgH/rUcFvG8u5gd4npzgRDyg=="
       }
     },
     "npm:@tokenizer/inflate": {
@@ -8466,6 +8529,15 @@
         "version": "1.0.2",
         "packageName": "balanced-match",
         "hash": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+      }
+    },
+    "npm:base-64": {
+      "type": "npm",
+      "name": "npm:base-64",
+      "data": {
+        "version": "0.1.0",
+        "packageName": "base-64",
+        "hash": "sha512-Y5gU45svrR5tI2Vt/X9GPd3L0HNIKzGu202EjxrXMpuc2V2CiKgemAbUUsqYmZJvPtCXoUKjNZwBJzsNScUbXA=="
       }
     },
     "npm:base64-js": {
@@ -12527,24 +12599,6 @@
         "hash": "sha512-g4WkyzFQVWHtu6uqGmQR4CQxz/CH3yDSlhzXMWzNjDx843gYjReZnMRanjRCq5XZFuQrGDxgUaiYWE8BRfVckA=="
       }
     },
-    "npm:jest-diff": {
-      "type": "npm",
-      "name": "npm:jest-diff",
-      "data": {
-        "version": "30.2.0",
-        "packageName": "jest-diff",
-        "hash": "sha512-dQHFo3Pt4/NLlG5z4PxZ/3yZTZ1C7s9hveiOj+GCN+uT109NC2QgsoVZsVOAvbJ3RgKkvyLGXZV9+piDpWbm6A=="
-      }
-    },
-    "npm:jest-diff@29.7.0": {
-      "type": "npm",
-      "name": "npm:jest-diff@29.7.0",
-      "data": {
-        "version": "29.7.0",
-        "packageName": "jest-diff",
-        "hash": "sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw=="
-      }
-    },
     "npm:jest-docblock": {
       "type": "npm",
       "name": "npm:jest-docblock",
@@ -13517,6 +13571,15 @@
         "hash": "sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw=="
       }
     },
+    "npm:merge-options": {
+      "type": "npm",
+      "name": "npm:merge-options",
+      "data": {
+        "version": "3.0.4",
+        "packageName": "merge-options",
+        "hash": "sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ=="
+      }
+    },
     "npm:merge-stream": {
       "type": "npm",
       "name": "npm:merge-stream",
@@ -13731,6 +13794,15 @@
         "version": "3.1.0",
         "packageName": "mimic-response",
         "hash": "sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ=="
+      }
+    },
+    "npm:min-indent": {
+      "type": "npm",
+      "name": "npm:min-indent",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "min-indent",
+        "hash": "sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg=="
       }
     },
     "npm:mini-css-extract-plugin": {
@@ -15164,6 +15236,24 @@
         "hash": "sha512-7B2FJt/P+qulrkjWNttofiQjpZ5czSnL00kr6kQ9GpiykF/agX6Z2GVX6e5ggpQq2jqtyLvRtHIiUnKPYM77+w=="
       }
     },
+    "npm:react-native-fs": {
+      "type": "npm",
+      "name": "npm:react-native-fs",
+      "data": {
+        "version": "2.20.0",
+        "packageName": "react-native-fs",
+        "hash": "sha512-VkTBzs7fIDUiy/XajOSNk0XazFE9l+QlMAce7lGuebZcag5CnjszB+u4BdqzwaQOdcYb5wsJIsqq4kxInIRpJQ=="
+      }
+    },
+    "npm:react-native-sqlite-storage": {
+      "type": "npm",
+      "name": "npm:react-native-sqlite-storage",
+      "data": {
+        "version": "6.0.1",
+        "packageName": "react-native-sqlite-storage",
+        "hash": "sha512-1tDFjrint6X6qSYKf3gDyz+XB+X79jfiL6xTugKHPRtF0WvqMtVgdLuNqZunIXjNEvNtNVEbXaeZ6MsguFu00A=="
+      }
+    },
     "npm:react-native-svg": {
       "type": "npm",
       "name": "npm:react-native-svg",
@@ -15236,6 +15326,15 @@
         "hash": "sha512-+QU2zd6OTD8XWIJCbffaiQeH9U73qIqafo1x6V1snCWYGJf6cVE0cDR4D8xRzcEnfI21IFrUPzPGtcPf8AC+Rw=="
       }
     },
+    "npm:react-test-renderer": {
+      "type": "npm",
+      "name": "npm:react-test-renderer",
+      "data": {
+        "version": "19.2.4",
+        "packageName": "react-test-renderer",
+        "hash": "sha512-Ttl5D7Rnmi6JGMUpri4UjB4BAN0FPs4yRDnu2XSsigCWOLm11o8GwRlVsh27ER+4WFqsGtrBuuv5zumUaRCmKw=="
+      }
+    },
     "npm:read-cache": {
       "type": "npm",
       "name": "npm:read-cache",
@@ -15252,6 +15351,15 @@
         "version": "0.8.0",
         "packageName": "rechoir",
         "hash": "sha512-/vxpCXddiX8NGfGO/mTafwjq4aFa/71pvamip0++IQk3zG8cbCj0fifNPrjjF1XMXUne91jL9OoxmdykoEtifQ=="
+      }
+    },
+    "npm:redent": {
+      "type": "npm",
+      "name": "npm:redent",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "redent",
+        "hash": "sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg=="
       }
     },
     "npm:regenerate": {
@@ -16235,6 +16343,15 @@
         "hash": "sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA=="
       }
     },
+    "npm:strip-indent": {
+      "type": "npm",
+      "name": "npm:strip-indent",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "strip-indent",
+        "hash": "sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ=="
+      }
+    },
     "npm:strnum": {
       "type": "npm",
       "name": "npm:strnum",
@@ -16982,6 +17099,15 @@
         "hash": "sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ=="
       }
     },
+    "npm:utf8": {
+      "type": "npm",
+      "name": "npm:utf8",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "utf8",
+        "hash": "sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ=="
+      }
+    },
     "npm:utf8-byte-length": {
       "type": "npm",
       "name": "npm:utf8-byte-length",
@@ -17461,7 +17587,27 @@
       },
       {
         "source": "mobile",
+        "target": "npm:@react-native-community/netinfo",
+        "type": "static"
+      },
+      {
+        "source": "mobile",
+        "target": "npm:@testing-library/react-native",
+        "type": "static"
+      },
+      {
+        "source": "mobile",
         "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "mobile",
+        "target": "npm:react-native-sqlite-storage",
+        "type": "static"
+      },
+      {
+        "source": "mobile",
+        "target": "npm:react-native-fs",
         "type": "static"
       },
       {
@@ -24831,6 +24977,18 @@
         "type": "static"
       }
     ],
+    "npm:@react-native-async-storage/async-storage": [
+      {
+        "source": "npm:@react-native-async-storage/async-storage",
+        "target": "npm:react-native",
+        "type": "static"
+      },
+      {
+        "source": "npm:@react-native-async-storage/async-storage",
+        "target": "npm:merge-options",
+        "type": "static"
+      }
+    ],
     "npm:@react-native-community/cli": [
       {
         "source": "npm:@react-native-community/cli",
@@ -25399,6 +25557,18 @@
       {
         "source": "npm:jsonfile@4.0.0",
         "target": "npm:graceful-fs",
+        "type": "static"
+      }
+    ],
+    "npm:@react-native-community/netinfo": [
+      {
+        "source": "npm:@react-native-community/netinfo",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:@react-native-community/netinfo",
+        "target": "npm:react-native",
         "type": "static"
       }
     ],
@@ -26609,6 +26779,129 @@
       {
         "source": "npm:@swc/types",
         "target": "npm:@swc/counter",
+        "type": "static"
+      }
+    ],
+    "npm:@testing-library/jest-native": [
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:react-native",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:react-test-renderer",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:chalk",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:jest-diff@29.7.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:jest-matcher-utils",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:pretty-format@29.7.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/jest-native",
+        "target": "npm:redent",
+        "type": "static"
+      }
+    ],
+    "npm:jest-diff@29.7.0": [
+      {
+        "source": "npm:jest-diff@29.7.0",
+        "target": "npm:chalk",
+        "type": "static"
+      },
+      {
+        "source": "npm:jest-diff@29.7.0",
+        "target": "npm:diff-sequences",
+        "type": "static"
+      },
+      {
+        "source": "npm:jest-diff@29.7.0",
+        "target": "npm:jest-get-type",
+        "type": "static"
+      },
+      {
+        "source": "npm:jest-diff@29.7.0",
+        "target": "npm:pretty-format@29.7.0",
+        "type": "static"
+      }
+    ],
+    "npm:pretty-format@29.7.0": [
+      {
+        "source": "npm:pretty-format@29.7.0",
+        "target": "npm:@jest/schemas@29.6.3",
+        "type": "static"
+      },
+      {
+        "source": "npm:pretty-format@29.7.0",
+        "target": "npm:ansi-styles@5.2.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:pretty-format@29.7.0",
+        "target": "npm:react-is",
+        "type": "static"
+      }
+    ],
+    "npm:@testing-library/react-native": [
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:jest",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:react-native",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:react-test-renderer",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:jest-matcher-utils@30.2.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:picocolors",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:pretty-format",
+        "type": "static"
+      },
+      {
+        "source": "npm:@testing-library/react-native",
+        "target": "npm:redent",
         "type": "static"
       }
     ],
@@ -30779,23 +31072,6 @@
         "type": "static"
       }
     ],
-    "npm:pretty-format@29.7.0": [
-      {
-        "source": "npm:pretty-format@29.7.0",
-        "target": "npm:@jest/schemas@29.6.3",
-        "type": "static"
-      },
-      {
-        "source": "npm:pretty-format@29.7.0",
-        "target": "npm:ansi-styles@5.2.0",
-        "type": "static"
-      },
-      {
-        "source": "npm:pretty-format@29.7.0",
-        "target": "npm:react-is",
-        "type": "static"
-      }
-    ],
     "npm:express": [
       {
         "source": "npm:express",
@@ -32854,28 +33130,6 @@
         "type": "static"
       }
     ],
-    "npm:jest-diff@29.7.0": [
-      {
-        "source": "npm:jest-diff@29.7.0",
-        "target": "npm:chalk",
-        "type": "static"
-      },
-      {
-        "source": "npm:jest-diff@29.7.0",
-        "target": "npm:diff-sequences",
-        "type": "static"
-      },
-      {
-        "source": "npm:jest-diff@29.7.0",
-        "target": "npm:jest-get-type",
-        "type": "static"
-      },
-      {
-        "source": "npm:jest-diff@29.7.0",
-        "target": "npm:pretty-format@29.7.0",
-        "type": "static"
-      }
-    ],
     "npm:jest-message-util": [
       {
         "source": "npm:jest-message-util",
@@ -34383,6 +34637,13 @@
       {
         "source": "npm:memfs",
         "target": "npm:fs-monkey",
+        "type": "static"
+      }
+    ],
+    "npm:merge-options": [
+      {
+        "source": "npm:merge-options",
+        "target": "npm:is-plain-obj",
         "type": "static"
       }
     ],
@@ -36991,6 +37252,30 @@
         "type": "static"
       }
     ],
+    "npm:react-native-fs": [
+      {
+        "source": "npm:react-native-fs",
+        "target": "npm:react-native",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-native-fs",
+        "target": "npm:base-64",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-native-fs",
+        "target": "npm:utf8",
+        "type": "static"
+      }
+    ],
+    "npm:react-native-sqlite-storage": [
+      {
+        "source": "npm:react-native-sqlite-storage",
+        "target": "npm:react-native",
+        "type": "static"
+      }
+    ],
     "npm:react-native-svg": [
       {
         "source": "npm:react-native-svg",
@@ -37527,6 +37812,23 @@
         "type": "static"
       }
     ],
+    "npm:react-test-renderer": [
+      {
+        "source": "npm:react-test-renderer",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-test-renderer",
+        "target": "npm:react-is@19.2.4",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-test-renderer",
+        "target": "npm:scheduler",
+        "type": "static"
+      }
+    ],
     "npm:read-cache": [
       {
         "source": "npm:read-cache",
@@ -37555,6 +37857,18 @@
       {
         "source": "npm:rechoir",
         "target": "npm:resolve",
+        "type": "static"
+      }
+    ],
+    "npm:redent": [
+      {
+        "source": "npm:redent",
+        "target": "npm:indent-string",
+        "type": "static"
+      },
+      {
+        "source": "npm:redent",
+        "target": "npm:strip-indent",
         "type": "static"
       }
     ],
@@ -38796,6 +39110,13 @@
       {
         "source": "npm:strip-ansi-cjs",
         "target": "npm:ansi-regex",
+        "type": "static"
+      }
+    ],
+    "npm:strip-indent": [
+      {
+        "source": "npm:strip-indent",
+        "target": "npm:min-indent",
         "type": "static"
       }
     ],
@@ -40920,5 +41241,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1769977553671
+  "computedAt": 1770045644939
 }
