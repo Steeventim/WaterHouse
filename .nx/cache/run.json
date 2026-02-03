@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx test --testPathPattern=Conflict --no-coverage",
-    "startTime": "2026-02-02T15:20:11.264Z",
-    "endTime": "2026-02-02T15:20:59.528Z",
+    "command": "nx test mobile --testPathPattern=InvoicePdfService.spec.ts",
+    "startTime": "2026-02-03T16:08:44.083Z",
+    "endTime": "2026-02-03T16:09:16.514Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "waterhouse:test",
+      "taskId": "mobile:test",
       "target": "test",
-      "projectName": "waterhouse",
-      "hash": "4937710437859125352",
-      "startTime": "2026-02-02T15:20:11.291Z",
-      "endTime": "2026-02-02T15:20:59.432Z",
+      "projectName": "mobile",
+      "hash": "8394199379264176331",
+      "startTime": "2026-02-03T16:08:44.162Z",
+      "endTime": "2026-02-03T16:09:16.407Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

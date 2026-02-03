@@ -1313,6 +1313,30 @@
     "// targets": [
       "apps/mobile/project.json",
       "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "apps/mobile/project.json",
+      "nx/core/project-json"
     ]
   },
   ".": {

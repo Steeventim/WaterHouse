@@ -94,6 +94,18 @@
             "configurations": {},
             "parallelism": true
           },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/apps/mobile"
+            ],
+            "options": {
+              "jestConfig": "apps/mobile/jest.config.cts",
+              "passWithNoTests": true
+            },
+            "configurations": {},
+            "parallelism": true
+          },
           "start": {
             "continuous": true,
             "options": {
@@ -41241,5 +41253,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1770045644939
+  "computedAt": 1770134918072
 }

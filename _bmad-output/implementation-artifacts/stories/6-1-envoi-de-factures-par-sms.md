@@ -1,6 +1,7 @@
 # Story 6-1: Envoi de Factures par SMS
 
 ## Story Header
+
 - **Story ID**: 6-1
 - **Key**: WH-6-1
 - **Epic**: Epic 6 - Envoi et Communication
@@ -12,12 +13,15 @@
 - **Story Points**: 8
 
 ## User Story
+
 En tant que **gestionnaire d'immeuble**, je veux **recevoir automatiquement les factures par SMS** afin que **je puisse informer rapidement mes locataires des nouveaux montants dus**.
 
 En tant que **locataire**, je veux **recevoir mes factures par SMS** afin que **je puisse payer rapidement et éviter les relances**.
 
 ## Acceptance Criteria
+
 ### Fonctionnel
+
 - [ ] Les factures sont automatiquement envoyées par SMS après génération
 - [ ] Le SMS contient le montant total, la période, et un lien de paiement
 - [ ] Les destinataires peuvent être configurés par immeuble (gestionnaire + locataires)
@@ -26,6 +30,7 @@ En tant que **locataire**, je veux **recevoir mes factures par SMS** afin que **
 - [ ] Interface pour consulter l'historique des SMS envoyés
 
 ### Non-Fonctionnel
+
 - [ ] Taux de succès d'envoi > 95%
 - [ ] Délai d'envoi < 5 minutes après génération facture
 - [ ] Support des opérateurs africains via Africa's Talking
@@ -35,6 +40,7 @@ En tant que **locataire**, je veux **recevoir mes factures par SMS** afin que **
 ## Technical Requirements
 
 ### Architecture Context
+
 - **Bounded Context**: Billing & Communication
 - **Integration Points**: Africa's Talking SMS API, Billing Service
 - **Security**: API keys sécurisées, rate limiting
@@ -43,6 +49,7 @@ En tant que **locataire**, je veux **recevoir mes factures par SMS** afin que **
 ### API Endpoints
 
 #### Backend (NestJS)
+
 ```typescript
 // Envoi SMS facture
 POST /api/billing/invoices/{id}/send-sms
@@ -65,6 +72,7 @@ Authorization: Bearer {token}
 ```
 
 #### Mobile (React Native)
+
 ```typescript
 // Service SMS
 interface SmsService {
@@ -77,6 +85,7 @@ interface SmsService {
 ### Database Schema
 
 #### Table: sms_messages
+
 ```sql
 CREATE TABLE sms_messages (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -102,6 +111,7 @@ CREATE INDEX idx_sms_sent_at ON sms_messages(sent_at);
 ```
 
 #### Table: sms_templates
+
 ```sql
 CREATE TABLE sms_templates (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -115,13 +125,14 @@ CREATE TABLE sms_templates (
 
 -- Template par défaut pour factures
 INSERT INTO sms_templates (name, template_text, variables) VALUES
-('invoice_sms', 'Facture WaterHouse - Periode: {period} - Montant: {amount} XAF - Payez via: {payment_link}', 
+('invoice_sms', 'Facture WaterHouse - Periode: {period} - Montant: {amount} XAF - Payez via: {payment_link}',
  '{"period": "string", "amount": "number", "payment_link": "string"}');
 ```
 
 ### Mobile Implementation
 
 #### Service SMS (TypeScript)
+
 ```typescript
 // src/services/smsService.ts
 import { api } from '../api/baseApi';
@@ -140,24 +151,27 @@ export interface SmsResult {
 
 export class SmsService {
   static async sendInvoiceSms(
-    invoiceId: string, 
-    recipients: SmsRecipient[]
+    invoiceId: string,
+    recipients: SmsRecipient[],
   ): Promise<SmsResult> {
     try {
-      const response = await api.post(`/billing/invoices/${invoiceId}/send-sms`, {
-        recipients: recipients.map(r => r.phone),
-        messageTemplate: 'invoice_sms'
-      });
-      
+      const response = await api.post(
+        `/billing/invoices/${invoiceId}/send-sms`,
+        {
+          recipients: recipients.map((r) => r.phone),
+          messageTemplate: 'invoice_sms',
+        },
+      );
+
       return {
         success: true,
-        smsIds: response.data.smsIds
+        smsIds: response.data.smsIds,
       };
     } catch (error) {
       return {
         success: false,
         smsIds: [],
-        errors: [error.message]
+        errors: [error.message],
       };
     }
   }
@@ -171,6 +185,7 @@ export class SmsService {
 ```
 
 #### Composant Historique SMS
+
 ```typescript
 // src/components/communication/SmsHistory.tsx
 import React, { useState, useEffect } from 'react';
@@ -209,8 +224,8 @@ export const SmsHistory: React.FC<{ invoiceId?: string }> = ({ invoiceId }) => {
             <Card.Content>
               <View style={styles.header}>
                 <Text style={styles.phone}>{item.recipient_phone}</Text>
-                <Chip 
-                  mode="outlined" 
+                <Chip
+                  mode="outlined"
                   textStyle={{ color: getStatusColor(item.status) }}
                 >
                   {item.status}
@@ -241,6 +256,7 @@ const styles = StyleSheet.create({
 ### Backend Implementation
 
 #### Service SMS (NestJS)
+
 ```typescript
 // src/modules/communication/sms.service.ts
 import { Injectable, Logger } from '@nestjs/common';
@@ -262,7 +278,7 @@ export class SmsService {
   async sendInvoiceSms(
     invoiceId: string,
     recipients: string[],
-    templateData: any
+    templateData: any,
   ): Promise<string[]> {
     const smsIds: string[] = [];
 
@@ -273,14 +289,14 @@ export class SmsService {
           invoice_id: invoiceId,
           recipient_phone: phone,
           message_text: this.buildMessage(templateData),
-          status: 'pending'
+          status: 'pending',
         });
         await this.smsRepository.save(smsMessage);
 
         // Envoyer via Africa's Talking
         const result = await this.africasTalkingService.sendSms(
-          phone, 
-          smsMessage.message_text
+          phone,
+          smsMessage.message_text,
         );
 
         // Mettre à jour le statut
@@ -301,7 +317,7 @@ export class SmsService {
           recipient_phone: phone,
           message_text: this.buildMessage(templateData),
           status: 'failed',
-          error_message: error.message
+          error_message: error.message,
         });
         await this.smsRepository.save(failedSms);
       }
@@ -317,15 +333,19 @@ export class SmsService {
 
   async getSmsHistory(filters: any): Promise<SmsMessage[]> {
     const query = this.smsRepository.createQueryBuilder('sms');
-    
+
     if (filters.invoiceId) {
-      query.andWhere('sms.invoice_id = :invoiceId', { invoiceId: filters.invoiceId });
+      query.andWhere('sms.invoice_id = :invoiceId', {
+        invoiceId: filters.invoiceId,
+      });
     }
     if (filters.status) {
       query.andWhere('sms.status = :status', { status: filters.status });
     }
     if (filters.dateFrom) {
-      query.andWhere('sms.sent_at >= :dateFrom', { dateFrom: filters.dateFrom });
+      query.andWhere('sms.sent_at >= :dateFrom', {
+        dateFrom: filters.dateFrom,
+      });
     }
     if (filters.dateTo) {
       query.andWhere('sms.sent_at <= :dateTo', { dateTo: filters.dateTo });
@@ -337,6 +357,7 @@ export class SmsService {
 ```
 
 #### Integration Africa's Talking
+
 ```typescript
 // src/integrations/africas-talking/africas-talking.service.ts
 import { Injectable, Logger } from '@nestjs/common';
@@ -347,7 +368,7 @@ import axios from 'axios';
 export class AfricasTalkingService {
   private readonly logger = new Logger(AfricasTalkingService.name);
   private readonly apiUrl = 'https://api.africastalking.com/version1/messaging';
-  
+
   constructor(private configService: ConfigService) {}
 
   async sendSms(phone: string, message: string): Promise<{
@@ -394,6 +415,7 @@ export class AfricasTalkingService {
 ### Testing Strategy
 
 #### Unit Tests
+
 ```typescript
 // src/modules/communication/sms.service.spec.ts
 describe('SmsService', () => {
@@ -420,6 +442,7 @@ describe('SmsService', () => {
 ```
 
 #### Integration Tests
+
 ```typescript
 // Test end-to-end envoi SMS
 describe('SMS Integration', () => {
@@ -434,6 +457,7 @@ describe('SMS Integration', () => {
 ```
 
 #### E2E Tests (Playwright)
+
 ```typescript
 // e2e/sms-communication.spec.ts
 test('Gestionnaire can view SMS history', async ({ page }) => {
@@ -442,6 +466,7 @@ test('Gestionnaire can view SMS history', async ({ page }) => {
 ```
 
 ### Implementation Checklist
+
 - [ ] Configuration Africa's Talking API
 - [ ] Création tables sms_messages et sms_templates
 - [ ] Implémentation SmsService backend
@@ -454,13 +479,49 @@ test('Gestionnaire can view SMS history', async ({ page }) => {
 - [ ] Logs et monitoring
 - [ ] Documentation API
 
+## Tasks/Subtasks
+
+- [ ] Configure Africa's Talking credentials and config wiring
+  - [ ] Add config keys and validation for API username, key, and shortcode
+  - [ ] Ensure secrets are loaded from environment in backend runtime
+- [ ] Add database entities and migrations for SMS tables
+  - [ ] Create `sms_messages` entity with indexes
+  - [ ] Create `sms_templates` entity and seed default invoice template
+  - [ ] Add migration scripts and update data-source config
+- [ ] Implement backend SMS service and provider integration
+  - [ ] Build `SmsService` with send, status tracking, and history filtering
+  - [ ] Implement Africa's Talking provider adapter with error handling
+  - [ ] Add retry logic and failure tracking
+- [ ] Add API endpoints for SMS operations
+  - [ ] POST send-invoice SMS endpoint with template mapping
+  - [ ] GET SMS history endpoint with filters
+  - [ ] GET SMS status endpoint
+- [ ] Implement mobile SMS service client
+  - [ ] Add `SmsService` API wrapper with send and history methods
+  - [ ] Define `SmsResult`, `SmsHistory`, and `SmsFilters` types
+- [ ] Build SMS history UI in mobile app
+  - [ ] Create `SmsHistory` component with list and status chips
+  - [ ] Add basic empty/loading/error states
+- [ ] Add tests (unit/integration/e2e as required)
+  - [ ] Backend unit tests for `SmsService` and provider adapter
+  - [ ] API endpoint tests for send/history/status
+  - [ ] Mobile component and service tests
+- [ ] Add logging and monitoring hooks
+  - [ ] Structured logs for send attempts and failures
+  - [ ] Track delivery latency and success rate
+- [ ] Update documentation
+  - [ ] API docs for SMS endpoints
+  - [ ] Configuration guide for Africa's Talking
+
 ### Dependencies
+
 - Africa's Talking SDK
 - TypeORM pour base de données
 - Axios pour HTTP requests
 - React Native Paper pour UI mobile
 
 ### Risks & Mitigations
+
 - **Risque**: Échec envoi SMS chez opérateurs africains
   - **Mitigation**: Retry automatique + fallback email
 - **Risque**: Coûts SMS élevés
@@ -469,6 +530,7 @@ test('Gestionnaire can view SMS history', async ({ page }) => {
   - **Mitigation**: Validation format téléphone africain
 
 ### Performance Considerations
+
 - Async processing pour envoi SMS
 - Index database pour requêtes fréquentes
 - Cache pour templates SMS

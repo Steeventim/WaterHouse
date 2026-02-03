@@ -78,7 +78,7 @@ development_status:
   epic-5: in-progress
   5-1-configuration-des-tarifs-de-facturation: review
     5-2-calcul-automatique-de-la-consommation: review
-  5-3-generation-de-factures-pdf: backlog
+  5-3-generation-de-factures-pdf: review
   5-4-historique-des-factures: backlog
   epic-5-retrospective: optional
 
