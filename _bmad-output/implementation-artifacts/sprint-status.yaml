@@ -67,11 +67,11 @@ development_status:
   epic-3-retrospective: optional
 
   # Epic 4: Synchronisation et Résolution de Conflits
-  epic-4: in-progress
+  epic-4: done
   4-1-synchronisation-automatique-en-ligne: review
   4-2-resolution-manuelle-des-conflits: review
   4-3-retry-des-synchronisations-échouées: review
-  4-4-affichage-du-statut-de-synchronisation: ready-for-dev
+  4-4-affichage-du-statut-de-synchronisation: review
   epic-4-retrospective: optional
 
   # Epic 5: Calcul et Génération des Factures
